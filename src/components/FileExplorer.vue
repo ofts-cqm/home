@@ -8,7 +8,7 @@ const control = useUIStore()
 </script>
 
 <template>
-  <div class="explorer editorLayout" :style="{width: control.showExplorer ? '20%' : '0'}">
+  <div class="editorLayout">
     <div class="explorer-title pad">
       Explorer
       <IconRootFolder/>
@@ -17,7 +17,7 @@ const control = useUIStore()
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
       </svg>
-      ABOUT ME
+      OFTS-CQM
     </div>
     <RouterLink to="/" class="file">
       <IconMarkdown/>
@@ -54,18 +54,6 @@ const control = useUIStore()
 
 .file.router-link-active {
   background-color: var(--color-background-soft);
-}
-
-.explorer {
-  margin-top: 1rem;
-  min-height: 100%;
-  display: block;
-  place-items: flex-start;
-  font-size: 1.2rem;
-  border-style: solid;
-  border-width: 0 1px 0 0;
-  border-color: #2B2B2B;
-  overflow: hidden;
 }
 
 .explorer-title {

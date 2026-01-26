@@ -10,25 +10,22 @@ const control = useUIStore()
 <template>
   <div class="main">
     <div class="header">
-      <p>Code</p>
-      <p>File</p>
-      <p>Edit</p>
-      <p>Selection</p>
-      <p>View</p>
-      <p>Go</p>
-      <p>Run</p>
-      <p>Terminal</p>
-      <p>Window</p>
-      <p>Help</p>
+      <!--div class="tools"-->
+        <pre class="tools">Code  File  Edit  Selection  View  Go  Run  Terminal  Window  Help</pre>
+      <!--/div-->
+
       <p class="title">Macrohard Virtual Studio Code v6.7.0</p>
     </div>
+
     <div class="content">
       <ToolBar/>
 
-      <FileExplorer/>
+      <div class="explor-edit">
+        <FileExplorer class="explorer" :class="{'open-explorer': control.showExplorer, 'close-explorer': !control.showExplorer}"/>
 
-      <div class="editor editorLayout" :style="{width: control.showExplorer ? '80%' : '100%'}">
-        <RouterView />
+        <div class="editor editorLayout" :class="{'open-editor': control.showExplorer}">
+          <RouterView />
+        </div>
       </div>
     </div>
 
@@ -61,16 +58,30 @@ const control = useUIStore()
   display: flex;
   place-content: flex-start;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   flex-direction: row;
-  gap: 1.5rem;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
+  overflow: hidden;
+}
+
+.tools{
+  width: 0;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-direction: row;
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  white-space: pre-wrap;
 }
 
 .title{
-  flex: 1;
+  flex-grow: 0;
+  flex-shrink: 0;
   text-align: right;
   padding-right: 2rem;
+  white-space: nowrap;
+  padding-left: 3rem;
 }
 
 .footer {
@@ -114,7 +125,83 @@ const control = useUIStore()
   overflow: hidden;
 }
 
+.explor-edit{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
 .editor {
   min-height: 100%;
+  min-width: 0;
+  width: 100%;
+  overflow: auto;
 }
+
+.explorer {
+  margin-top: 1rem;
+  min-height: 100%;
+  min-width: 0;
+  width: 0;
+  display: block;
+  place-items: flex-start;
+  font-size: 1rem;
+  border-style: solid;
+  border-width: 0 1px 0 0;
+  border-color: #2B2B2B;
+  overflow: hidden;
+}
+
+.open-editor{
+  width: 80%;
+}
+
+.open-explorer{
+  width: 20%;
+}
+
+.close-explorer{
+  width: 0%;
+}
+
+@media (max-width: 800px) {
+  .explor-edit{
+    flex-direction: column-reverse;
+  }
+
+  .editor{
+    min-width: 100%;
+    min-height: 0;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .open-editor{
+    height: 70%;
+  }
+
+  .open-explorer{
+    height: 30%;
+  }
+
+  .close-explorer{
+    height: 0;
+  }
+
+  .explorer {
+    margin-top: 0;
+    min-height: 0;
+    min-width: 100%;
+    display: block;
+    place-items: flex-start;
+    font-size: 1rem;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-color: #2B2B2B;
+    overflow: hidden;
+  }
+}
+
+
 </style>

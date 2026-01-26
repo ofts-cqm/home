@@ -65,4 +65,11 @@ const control = useUIStore()
   padding: 25%;
   display: block;
 }
+
+@media (max-width: 800px) {
+    .toolbar{
+        width: 20vw;
+        max-width: 50px;
+    }
+}
 </style>
