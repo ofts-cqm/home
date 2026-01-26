@@ -56,6 +56,17 @@
   white-space: pre-wrap;
 }
 
+@media (max-width: 800px) {
+    .header{
+        flex-direction: column-reverse;
+        height: 8vh;
+    }
+
+    .tools{
+        width: 100%;
+    }
+}
+
 .title{
   flex-grow: 0;
   flex-shrink: 0;

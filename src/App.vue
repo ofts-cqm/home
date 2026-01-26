@@ -89,6 +89,9 @@ const control = useUIStore()
     margin-top: 0;
     min-height: 0;
     min-width: 100%;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-color: #2B2B2B;
   }
 }
 
