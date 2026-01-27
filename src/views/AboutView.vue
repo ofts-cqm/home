@@ -6,7 +6,6 @@
 
 <style>
   .about {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     background-color: aqua;

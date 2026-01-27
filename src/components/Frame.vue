@@ -56,6 +56,14 @@
   white-space: pre-wrap;
 }
 
+.content {
+  display: flex;
+  width: 100vw;
+  height: 93vh;
+  flex-direction: row;
+  overflow: hidden;
+}
+
 @media (max-width: 800px) {
     .header{
         flex-direction: column-reverse;
@@ -64,6 +72,10 @@
 
     .tools{
         width: 100%;
+    }
+
+    .content {
+      height: 89vh;
     }
 }
 
@@ -107,13 +119,5 @@
   width: 100vw;
   height: 100vh;
   flex-direction: column;
-}
-
-.content {
-  display: flex;
-  width: 100vw;
-  height: 93vh;
-  flex-direction: row;
-  overflow: hidden;
 }
 </style>
