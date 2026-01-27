@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import { RouterView, useRoute } from 'vue-router'
 import FileExplorer from './components/FileExplorer.vue';
 import { useUIStore } from './stores/control'
 import ToolBar from './components/ToolBar.vue';
 import Frame from './components/Frame.vue';
-import IconMarkdown from './components/icons/IconMarkdown.vue';
+import FileEditor from './components/FileEditor.vue';
 
 const control = useUIStore()
-const route = useRoute();
 </script>
 
 <template>
@@ -16,56 +14,12 @@ const route = useRoute();
 
     <div class="explor-edit">
       <FileExplorer class="explorer" :class="{'open-explorer': control.showExplorer, 'close-explorer': !control.showExplorer}"/>
-
-      <div class="editor editorLayout" :class="{'open-editor': control.showExplorer}">
-        <div class="file-tag">
-          <div class="open-file">
-            <IconMarkdown/>
-            {{ route.meta.label }}
-          </div>
-          <div class="tag-space"></div>
-        </div>
-        <RouterView class="file-view"/>
-      </div>
+      <FileEditor class="editor" :class="{'open-editor': control.showExplorer}"/>
     </div>
   </Frame>
 </template>
 
 <style scoped>
-.file-tag {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 0;
-  flex-shrink: 0;
-  height: 5vh;
-}
-
-.open-file {
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-grow: 0;
-  border-style: solid;
-  border-width: 2px 0 0 0;
-  border-color: #3376CE;
-  font-style: italic;
-}
-
-.tag-space {
-  flex-grow: 114514;
-  border-style: solid;
-  border-width: 0 0 1px 1px;
-  border-color: #2B2B2B;
-}
-
-.file-view {
-  overflow: scroll;
-  flex-grow: 114514;
-}
-
-
 .explor-edit{
   display: flex;
   flex-direction: row;
@@ -139,6 +93,4 @@ const route = useRoute();
     border-color: #2B2B2B;
   }
 }
-
-
 </style>
