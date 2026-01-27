@@ -63,6 +63,11 @@ const route = useRoute();
 .file-view {
   overflow: scroll;
   flex-grow: 114514;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 8%;
+  color: antiquewhite;
 }
 
 
