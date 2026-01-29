@@ -6,7 +6,7 @@
   <main>
     <h1>Talk About Your Projects</h1>
     <div class="projects">
-      <ProjectCard src="mcgif.png" :languages="['React', 'Java', 'Kotlin', 'Ktor', 'JavaFx', 'MySql']">
+      <ProjectCard src="mcgif.png" :languages="['React', 'JavaScript', 'Java', 'Kotlin', 'Ktor', 'JavaFx', 'MySql']">
         <template #name>Minecraft Skin Animator</template>
         I have a website for a Minecraft skin animation generator, 
         hosted at <a href='https://mcgif.cn' target="_blank">mcgif.cn</a> 
