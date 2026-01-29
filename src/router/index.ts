@@ -11,13 +11,13 @@ const router = createRouter({
       meta: { label: 'README.md' }
     },
     {
-      path: '/about',
-      name: 'about',
-      meta: { label: 'About.md' },
+      path: '/projects',
+      name: 'projects',
+      meta: { label: 'Projects.md' },
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      component: () => import('../views/ProjectsView.vue'),
     },
   ],
 })

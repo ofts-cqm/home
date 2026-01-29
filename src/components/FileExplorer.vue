@@ -24,9 +24,9 @@ const control = useUIStore()
       README.md
     </RouterLink>
 
-    <RouterLink to="/about" class="file">
+    <RouterLink to="/projects" class="file">
       <IconMarkdown/>
-      About.md
+      Projects.md
     </RouterLink>
   </div>
 </template>
