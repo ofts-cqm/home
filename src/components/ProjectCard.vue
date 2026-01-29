@@ -16,8 +16,10 @@ import LanguageChip from './LanguageChip.vue';
   <div class="card">
     <div class="card-inner">
       <div class="card-front">
-        <slot name="name"></slot>
-        <img :src="'/src/assets/' + src"/>
+        <p class="heading" >
+          <slot name="name"></slot>
+        </p>
+        <img class="image" :src="'/src/assets/' + src"/>
         <p class="languages">
           <LanguageChip v-for="language in languages" :language="language"/>
         </p>
@@ -32,9 +34,23 @@ import LanguageChip from './LanguageChip.vue';
 </template>
 
 <style scoped>
+  .heading {
+    height: 15%;
+    font-size: 8cqw;
+    align-items: center;
+  }
+
+  .image {
+    height: 70%;
+  }
+
   .languages{
+    height: 15%;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    margin-top: 5%;
+    align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
@@ -79,8 +95,8 @@ import LanguageChip from './LanguageChip.vue';
     align-items: flex-start;
     border: 10px solid var(--color-background-soft);
     border-radius: 10px;
-    justify-content: space-between;
     font-size: 1.5rem;
+    container-type: inline-size;
     transform: rotateY(0deg);
   }
 

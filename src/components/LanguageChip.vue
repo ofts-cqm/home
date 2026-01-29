@@ -79,5 +79,6 @@ const computedColor = computed(() => {
         justify-content: center;
         padding-left: 0.3rem;
         padding-right: 0.3rem;
+        font-size: 5cqw;
     }
 </style>
