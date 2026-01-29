@@ -35,7 +35,7 @@
         It was primarily developed in C# using Stardew Valley’s modding API, SMAPI, and JSON to load resources. 
       </ProjectCard>
 
-      <ProjectCard src="me.jpg" :languages="['Java', 'Kotlin', 'Android Studio', 'Python', 'Flask', 'MySql', 'RestApi']">
+      <ProjectCard src="wattodo.png" :languages="['Java', 'Kotlin', 'Android Studio', 'Python', 'Flask', 'MySql', 'RestApi']">
         <template #name>Android Todo App</template>
         I have developed an Android Todo-List application in Java and Kotlin using Android Studio. 
         It implements a Three-Tier-Architecture, with a Python Flask backend and a MySQL database.
@@ -44,12 +44,17 @@
 
       <ProjectCard src="me.jpg" :languages="['C Sharp']">
         <template #name>C Compiler</template>
-        no descriptions yet
+        A C compiler that supports about 40% of all C keywords and all C operators. Built using a custom lexer
+        and token generator. Outputs a tokenzed grammer tree and an intermediate language. Can be DIYed to 
+        fit various assembly language. Due to the complexity of linking, this compiler only generate assembly codes;
+        it cannot link against system libraries. 
       </ProjectCard>
 
       <ProjectCard src="me.jpg" :languages="['Java']">
-        <template #name>Java 3D Render</template>
-        no descriptions yet
+        <template #name>Minecraft</template>
+        A Minecraft built using my own Java 3D CPU Render. Supports ~40 blocks. Support async chunk loading and saving. 
+        Demonstrating strong understanding of rendering pipeline, shader and render structures and implementations, and 
+        strong understanding of computer graphics. 
       </ProjectCard>
     </div>
   </main>
