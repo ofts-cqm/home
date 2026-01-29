@@ -42,7 +42,7 @@
         It also uses a local caching system with JSON to ensure data availability and security
       </ProjectCard>
 
-      <ProjectCard src="me.jpg" :languages="['C Sharp']">
+      <ProjectCard src="compiler.png" :languages="['C Sharp']">
         <template #name>C Compiler</template>
         A C compiler that supports about 40% of all C keywords and all C operators. Built using a custom lexer
         and token generator. Outputs a tokenzed grammer tree and an intermediate language. Can be DIYed to 
@@ -50,7 +50,7 @@
         it cannot link against system libraries. 
       </ProjectCard>
 
-      <ProjectCard src="me.jpg" :languages="['Java']">
+      <ProjectCard src="minecraft.png" :languages="['Java']">
         <template #name>Minecraft</template>
         A Minecraft built using my own Java 3D CPU Render. Supports ~40 blocks. Support async chunk loading and saving. 
         Demonstrating strong understanding of rendering pipeline, shader and render structures and implementations, and 
