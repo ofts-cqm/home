@@ -4,8 +4,23 @@ import { useUIStore } from './stores/control'
 import ToolBar from './components/ToolBar.vue';
 import Frame from './components/Frame.vue';
 import FileEditor from './components/FileEditor.vue';
+import { onBeforeUnmount, onMounted } from 'vue';
 
 const control = useUIStore()
+
+let resizeTimer:number;
+
+function resizeListener(){
+  document.body.classList.add('no-transition');
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove('no-transition');
+  }, 150);
+}
+
+onMounted(() => window.addEventListener('resize', resizeListener) );
+
+onBeforeUnmount(() => window.removeEventListener('resize', resizeListener) );
 </script>
 
 <template>

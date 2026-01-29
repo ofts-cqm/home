@@ -67,7 +67,7 @@
 @media (max-width: 800px) {
     .header{
         flex-direction: column-reverse;
-        height: 8vh;
+        height: 7vh;
     }
 
     .tools{
