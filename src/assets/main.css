@@ -10,6 +10,10 @@
   transition: width 1s, height 1s;
 }
 
+.no-transition .editorLayout {
+  transition: none !important;
+}
+
 a,
 .green {
   text-decoration: none;
