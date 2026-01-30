@@ -30,7 +30,7 @@ const imageUrl = computed(() => {
         </p>
       </div>
       <div class="card-back">
-        <p>
+        <p class="description">
           <slot></slot>
         </p>
       </div>
@@ -39,6 +39,11 @@ const imageUrl = computed(() => {
 </template>
 
 <style scoped>
+  .description{
+    width: 100%;
+    font-size: 5cqw;
+  }
+
   .heading {
     height: 15%;
     font-size: 8cqw;
@@ -116,5 +121,6 @@ const imageUrl = computed(() => {
     font-size: 0.9rem;
     padding: 0.5rem;
     transform: rotateY(180deg);
+    container-type: inline-size;
   }
 </style>
