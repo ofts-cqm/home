@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps({ 
+const props = defineProps({ 
   src: {
     type: String,
     required: true
@@ -9,7 +9,12 @@ defineProps({
     default: () => []
   }
 })
+import { computed } from 'vue';
 import LanguageChip from './LanguageChip.vue';
+
+const imageUrl = computed(() => {
+  return new URL(`../assets/${props.src}`, import.meta.url).href
+})
 </script>
 
 <template>
@@ -19,13 +24,13 @@ import LanguageChip from './LanguageChip.vue';
         <p class="heading" >
           <slot name="name"></slot>
         </p>
-        <img class="image" :src="'/src/assets/' + src"/>
+        <img class="image" :src="imageUrl"/>
         <p class="languages">
           <LanguageChip v-for="language in languages" :language="language"/>
         </p>
       </div>
       <div class="card-back">
-        <p>
+        <p class="description">
           <slot></slot>
         </p>
       </div>
@@ -34,6 +39,11 @@ import LanguageChip from './LanguageChip.vue';
 </template>
 
 <style scoped>
+  .description{
+    width: 100%;
+    font-size: 5cqw;
+  }
+
   .heading {
     height: 15%;
     font-size: 8cqw;
@@ -111,5 +121,6 @@ import LanguageChip from './LanguageChip.vue';
     font-size: 0.9rem;
     padding: 0.5rem;
     transform: rotateY(180deg);
+    container-type: inline-size;
   }
 </style>
