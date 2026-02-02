@@ -1,7 +1,11 @@
 <template>
   <div class="bg" v-if="timeLeft > 0">
     <div class="window">
-        <p>Opening Remote Codespace...</p>
+        <div class="title">
+            <h3>Macrohard Virtual Studio</h3>
+            <p v-if="timeLeft > 1500">Connecting to Remote Host...</p>
+            <p v-else>Opening Codespace...</p>
+        </div>
         <div class="progress_bar" :style="{width: `${(3000 - timeLeft) / 30}%`}"></div>
     </div>
   </div>
@@ -29,6 +33,7 @@
 
 .window{
     width: 25vw;
+    min-width: 350px;
     height: 25vh;
     background-color: var(--color-background-dark);
     border-width: 2px;
@@ -42,19 +47,22 @@
     color: white;
 }
 
-p{
-    padding: 2rem;
+.title {
+    padding-left: 2rem;
+    gap: 0.5rem;
+    padding-top: 1rem;
 }
 </style>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import router from '@/router'
 import { useUIStore } from './../stores/control'
 
 const timeLeft = ref(3000) // countdown start (seconds)
 const control = useUIStore()
-let intervalId = null
+let intervalId:number;
+let resizeTimer:number;
 
 onMounted(() => {
     intervalId = setInterval(() => {
@@ -63,10 +71,15 @@ onMounted(() => {
         } else {
             clearInterval(intervalId)
             control.showExplorer = true;
+
+            document.body.classList.add('no-transition');
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                document.body.classList.remove('no-transition');
+            }, 150);
             router.push({ path: 'home' });
         }
     }, 10)
-
 })
 
 onUnmounted(() => {

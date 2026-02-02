@@ -44,8 +44,8 @@
 
       <ProjectCard src="compiler.png" :languages="['C Sharp']">
         <template #name>C Compiler</template>
-        A C compiler that supports about 40% of all C keywords and all C operators. Built using a custom lexer
-        and token generator. Outputs a tokenzed grammer tree and an intermediate language. Can be DIYed to 
+        A C compiler (Compiler + Assembler) that supports about 40% of all C keywords and all C operators. Built using a custom lexer
+        and token generator. Can output tokenzed grammer trees, intermediate languages, or assembly codes. Can be DIYed to 
         fit various assembly language. Due to the complexity of linking, this compiler only generate assembly codes;
         it cannot link against system libraries. 
       </ProjectCard>
