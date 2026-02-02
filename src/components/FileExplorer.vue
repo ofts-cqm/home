@@ -19,7 +19,7 @@ const control = useUIStore()
       </svg>
       OFTS-CQM
     </div>
-    <RouterLink to="/" class="file">
+    <RouterLink to="/home" class="file">
       <IconMarkdown/>
       README.md
     </RouterLink>
