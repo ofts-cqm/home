@@ -28,6 +28,11 @@ const control = useUIStore()
       <IconMarkdown/>
       Projects.md
     </RouterLink>
+
+    <RouterLink to="/about-me" class="file">
+      <IconMarkdown/>
+      MoreAboutMe.md
+    </RouterLink>
   </div>
 </template>
 

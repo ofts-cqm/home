@@ -11,6 +11,12 @@ const router = createRouter({
       component: EmptyView,
     },
     {
+      path: '/about-me',
+      name: 'about-me',
+      meta: { label: 'MoreAboutMe.md'},
+      component: () => import('../views/MoreAboutMeView.vue')
+    },
+    {
       path: '/home',
       name: 'home',
       component: HomeView,
