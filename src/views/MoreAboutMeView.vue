@@ -1,7 +1,3 @@
-<script setup lang="ts">
-  import ProjectCard from '../components/ProjectCard.vue';
-</script>
-
 <template>
   <main>
     <h1>So, Why Software Engineering?</h1>
