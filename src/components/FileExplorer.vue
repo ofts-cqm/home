@@ -2,9 +2,6 @@
 import { RouterLink } from 'vue-router'
 import IconMarkdown from './icons/IconMarkdown.vue';
 import IconRootFolder from './icons/IconRootFolder.vue';
-import { useUIStore } from './../stores/control'
-
-const control = useUIStore()
 </script>
 
 <template>
@@ -32,6 +29,11 @@ const control = useUIStore()
     <RouterLink to="/about-me" class="file">
       <IconMarkdown/>
       MoreAboutMe.md
+    </RouterLink>
+
+    <RouterLink to="/contact" class="file">
+      <IconMarkdown/>
+      Contact.md
     </RouterLink>
   </div>
 </template>

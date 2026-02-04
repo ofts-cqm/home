@@ -19,6 +19,10 @@ p {
   display: none;
 }
 
+.mobile-block{
+  display: none;
+}
+
 .text-image {
   display: grid;
   grid-template-columns: 45% 45%;
@@ -30,6 +34,10 @@ p {
 @media (max-width: 800px) {
   .mobile{
     display: contents;
+  }
+
+  .mobile-block{
+    display: block;
   }
 
   .desktop{
