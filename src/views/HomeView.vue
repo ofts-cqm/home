@@ -1,13 +1,13 @@
 <template>
   <main>
-    <h1>Welcome to OFTS_CQM (Sam Chen)'s Homepage!</h1>
+    <h1>Welcome to OFTS_CQM (Sam Chen)'s Codespace!</h1>
     <div class = 'first'>
       <div class="image">
         <img src="/src/assets/me.jpg"/>
       </div>
       <div class="paragraph" style="flex: 6">
         <p>
-          Congradulation! You found OFTS_CQM (Sam Chen)'s homepage! You can find anything about OFTS_CQM here!.
+          Congradulation! You found OFTS_CQM (Sam Chen)'s codespace! You can find anything about OFTS_CQM here!.
         </p>
 
         <p>

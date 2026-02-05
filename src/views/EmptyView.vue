@@ -64,6 +64,8 @@ const control = useUIStore()
 let intervalId:number;
 let resizeTimer:number;
 
+control.showExplorer = false;
+
 onMounted(() => {
     intervalId = setInterval(() => {
         if (timeLeft.value > 0) {

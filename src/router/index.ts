@@ -11,6 +11,18 @@ const router = createRouter({
       component: EmptyView,
     },
     {
+      path: '/contact',
+      name: 'contact',
+      meta: { label: 'Contact.md'},
+      component: () => import('../views/ContactView.vue')
+    },
+    {
+      path: '/about-me',
+      name: 'about-me',
+      meta: { label: 'MoreAboutMe.md'},
+      component: () => import('../views/MoreAboutMeView.vue')
+    },
+    {
       path: '/home',
       name: 'home',
       component: HomeView,

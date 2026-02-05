@@ -68,8 +68,8 @@ const control = useUIStore()
 
 @media (max-width: 800px) {
     .toolbar{
-        width: 20vw;
-        max-width: 50px;
+        width: 50px;
+        min-width: 50px;
     }
 }
 </style>

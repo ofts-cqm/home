@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 
 export const useUIStore = defineStore('control', {
   state: () => ({
-    showExplorer: false
+    showExplorer: true
   }),
   actions: {
     toggleExplorer() {
