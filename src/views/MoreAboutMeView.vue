@@ -70,8 +70,9 @@ h2{
 
 .meme{
     aspect-ratio: 0.4767 !important;
-    height: 100vh !important;
+    max-height: 100vh !important;
     width: auto !important;
+    max-width: 90%;
     margin-right: auto;
 }
 
