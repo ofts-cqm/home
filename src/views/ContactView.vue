@@ -3,17 +3,17 @@
     <h1>My Contact Info:</h1>
 
     <div class="contact">        
-        <p><img src="/src/assets/linkedin.svg"/><br class="mobile-block"><a>Qinamu Chen</a></p>
+        <p><img src="/src/assets/linkedin.svg"/><br class="mobile-block"><a target="_blank" href="https://www.linkedin.com/in/qianmu-chen/">Qinamu Chen</a></p>
 
-        <p><img src="/src/assets/github.svg"/><br class="mobile-block"><a>ofts-cqm</a></p>
+        <p><img src="/src/assets/github.svg"/><br class="mobile-block"><a target="_blank" href="https://github.com/ofts-cqm">ofts-cqm</a></p>
 
-        <p><img src="/src/assets/instagram.svg"><br class="mobile-block"><a>qianmuc</a></p>
+        <p><img src="/src/assets/instagram.svg"><br class="mobile-block"><a target="_blank" href="https://www.instagram.com/qianmuc/">qianmuc</a></p>
 
-        <p><img src="/src/assets/gmail.svg"/><br class="mobile-block"><a>qianmuchen.sam@gmail.com</a></p>
+        <p><img src="/src/assets/gmail.svg"/><br class="mobile-block"><a target="_blank" href="mailto:qianmuchen.sam@gmail.com">qianmuchen.sam@gmail.com</a></p>
         
-        <p><img src="/src/assets/gmail.svg"/><br class="mobile-block"><a>sam.chen@uwaterloo.ca</a></p>
+        <p><img src="/src/assets/gmail.svg"/><br class="mobile-block"><a target="_blank" href="mailto:sam.chen@uwaterloo.ca">sam.chen@uwaterloo.ca</a></p>
 
-        <p><img src="/src/assets/wechat.svg"/><br class="mobile-block"><a>13651113174</a></p>
+        <p><img src="/src/assets/wechat.svg"/><br class="mobile-block">13651113174</p>
     </div>
   </main>
 </template>
