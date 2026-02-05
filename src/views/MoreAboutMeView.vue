@@ -51,10 +51,28 @@
             originally used to store my mods' codes.
         </p>
     </div>
+
+    <h1>How Do You Feel About Studying Software Engineering?</h1>
+
+    <div class="paragraph">
+        <h2>Here is a meme from reddit:</h2>
+        <img class="meme" src="/src/assets/meme.png"/>
+    </div>
   </main>
 </template>
 
 <style scoped src="./ViewCommon.css"></style>
 
 <style>
+h2{
+    padding: 2rem 0 2rem 0;
+}
+
+.meme{
+    aspect-ratio: 0.4767 !important;
+    height: 100vh !important;
+    width: auto !important;
+    margin-right: auto;
+}
+
 </style>
