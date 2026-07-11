@@ -23,7 +23,7 @@ import IconRootFolder from './icons/IconRootFolder.vue';
 
     <RouterLink to="/projects" class="file">
       <IconMarkdown/>
-      Projects.md
+      Experience.md
     </RouterLink>
 
     <RouterLink to="/about-me" class="file">

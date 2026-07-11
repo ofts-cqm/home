@@ -39,8 +39,7 @@
           I am proficient in front-end frameworks such as ReactJS and Vue, with other technologies such as css, tailwind css, and html. 
           For background, no Spring Boot yet, but I can use other common Java/Kotlin frameworks such as Javelin and Ktor, 
           as well as Python frameworks such as Flask. I have Android development experience with Android Studio and Java/Kotlin, 
-          and desktop development with JavaFX, Java Swing, or Qt/C++. Writing UI in C++ is a pain, but sometimes, 
-          like embedded systems or industrial computers, C++ is the only option. 
+          and desktop development with JavaFX, Java Swing, or Qt/QML. 
         </p>
         <h2>
           If you want to find out more about me, you can go to the file explorer at the <span class="desktop">left side</span><span class="mobile">bottom</span>!

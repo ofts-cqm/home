@@ -4,7 +4,32 @@
 
 <template>
   <main>
-    <h1>Talk About Your Projects</h1>
+    <h1>My Work Experience</h1>
+    <div class = 'first'>
+      <div class="image">
+        <img src="/src/assets/ascendance.jpeg"/>
+      </div>
+      <div class="paragraph" style="flex: 6">
+        <p>
+          My first and only work experience is <a target="_blank" href="https://www.ascendancefoundry.com">Ascendance Foundry</a>. 
+        </p>
+
+        <p>
+          Ascendance Foundry is a consulting firm that brings automation to various industries. We believe that, 
+          with the help of AI, any junior programmer is capable of building complex systems. 
+          Therefore, Ascendance Foundry focus on training and developing junior software engineers as "Forward Deployed Engineers" (like me),
+          send them to various customers, to develop automated workflows and bring AI into their systems. 
+        </p>
+
+        <p>
+          With the proper usage of AI, junior software engineers can show unimaginable productivity, 
+          and are capable of building maintainable and scalable customized 
+          softwares. In the past, a customized program requires a large time spending a lot of time and resources to build, 
+          while AI significantly reduces the cost, making customized software affordable to all small size companies. 
+        </p>
+      </div>
+    </div>
+    <h1>what About Your Personal Projects?</h1>
     <div class="projects">
       <ProjectCard src="mcgif.png" :languages="['React', 'JavaScript', 'Java', 'Kotlin', 'Ktor', 'JavaFx', 'MySql']">
         <template #name>Minecraft Skin Animator</template>
@@ -16,7 +41,7 @@
         Right now, I have 200+ users, and I am glad to see that my projects have helped. 
       </ProjectCard>
 
-      <ProjectCard src="matcalc.png" :languages="['Qt', 'cpp', 'Json']">
+      <ProjectCard src="matcalc.png" :languages="['Qt', 'cpp', 'QML', 'Json']">
         <template #name>Linear Algebra Calculator</template>
         I have developed a linear algebra calculator in C++ using Qt. 
         I made it so I can suffer less from Math 115 Linear Algebra for Engineers. 
@@ -82,4 +107,30 @@
     grid-template-columns: 100%;
   }
 }
+
+.first{
+  display: flex;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.image{
+  flex: 4;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border: 6px solid #FFFFFF;
+  border-radius: 50%; /* Makes the image a perfect circle */
+}
+
+@media (max-width: 600px) {
+  .first{
+    flex-direction: column;
+  }
+}
+
 </style>
