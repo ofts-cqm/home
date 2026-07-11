@@ -87,7 +87,7 @@
 
 <style scoped src="./ViewCommon.css"></style>
 
-<style>
+<style scoped>
 .projects {
   display: grid;
   grid-template-columns: 30% 30% 30%;
@@ -121,8 +121,8 @@
 }
 
 img {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  aspect-ratio: 1;
   border: 6px solid #FFFFFF;
   border-radius: 50%; /* Makes the image a perfect circle */
 }
