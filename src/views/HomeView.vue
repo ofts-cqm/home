@@ -4,6 +4,7 @@
     <div class = 'first'>
       <div class="image">
         <img src="/src/assets/me.jpg"/>
+        <p>Picture by my highschool friend Wilson</p>
       </div>
       <div class="paragraph" style="flex: 6">
         <p>
@@ -31,20 +32,37 @@
         <h2 style="text-align: right;">---- By OFTS_CQM</h2>
       </div>
     </div>
+
     <div class="paragraph">
-        <h2>What’s Your Tech Stack?</h2>
+      <h2>What’s Your Tech Stack?</h2>
+      <p>
+        I am proficient in common OOP languages such as C# and Java, as well as game engines like Unity. 
+        Other than video game stuff, I also do website development. 
+        I am proficient in front-end frameworks such as ReactJS and Vue, with other technologies such as css, tailwind css, and html. 
+        For background, no Spring Boot yet, but I can use other common Java/Kotlin frameworks such as Javelin and Ktor, 
+        as well as Python frameworks such as Flask. I have Android development experience with Android Studio and Java/Kotlin, 
+        and desktop development with JavaFX, Java Swing, or Qt/QML. 
+      </p>
+    </div>
+
+    <h2>Whats your university?</h2>
+    <div class = 'first'>
+      <div class="paragraph" style="flex: 10">
         <p>
-          I am proficient in common OOP languages such as C# and Java, as well as game engines like Unity. 
-          Other than video game stuff, I also do website development. 
-          I am proficient in front-end frameworks such as ReactJS and Vue, with other technologies such as css, tailwind css, and html. 
-          For background, no Spring Boot yet, but I can use other common Java/Kotlin frameworks such as Javelin and Ktor, 
-          as well as Python frameworks such as Flask. I have Android development experience with Android Studio and Java/Kotlin, 
-          and desktop development with JavaFX, Java Swing, or Qt/QML. 
+          I currently study Software Engineering in University of Waterloo. It is definately a very stressful major, 
+          I have to be honest, but I learned a lot, and made a lot of friends, I even joined a band. Despite its stressful 
+          study, I still find it to be an enjoyable university life. 
         </p>
-        <h2>
-          If you want to find out more about me, you can go to the file explorer at the <span class="desktop">left side</span><span class="mobile">bottom</span>!
-        </h2>
       </div>
+      <div class="image">
+        <img src="/src/assets/linkedin.png" style="border-radius: 50%;"/>
+        <p>Picture by University of Waterloo</p>
+      </div>
+    </div>
+
+    <h2>
+      If you want to find out more about me, you can go to the file explorer at the <span class="desktop">left side</span><span class="mobile">bottom</span>!
+    </h2>
   </main>
 </template>
 
