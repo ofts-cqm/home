@@ -33,11 +33,11 @@ import Accordion from '@/components/Accordion.vue';
                 Minecraft is famous for its modding community. When I wrote this article, 
                 Minecraft had approximately 200k mods on CurseForge (the largest mod platform for Minecraft), 
                 not counting those that are not uploaded to CurseForge. When I first got in touch with these mods in elementary school, 
-                I was shocked by the infinite possibilities they bring. Gradually, a thought popped up from my head: Can I make my own mod? 
+                I was shocked by the infinite possibilities they bring. Gradually, a thought popped into my head: Can I make my own mod? 
                 <br><br>
                 This is a screenshot of the modpack (made around 2016 ) that sparked my idea for making my own mod. 
                 <br><br>
-                Note that the original video was lost, this is an archive
+                Note that the original video was lost; this is an archive
             </p>
             <img src="/src/assets/muyu.jpg">
         </div>
@@ -51,24 +51,24 @@ import Accordion from '@/components/Accordion.vue';
         </p>
     </div>
 
-    <h1>What does 'OFTS-CQM' stands for?</h1>
+    <h1>What does 'OFTS-CQM' stand for?</h1>
 
     <div class="paragraph">
         <p>
             Well, I have used that name as my Minecraft ID for several years. CQM is the acronym of my Chinese name Chen Qianmu, and OFTS
             is a bit complicated. 
             <br><br>
-            Back then, there was a game called Minecraft: Story Mode (the company bankrupted so its not availabe any more). 
-            It talks about the advantures of a team called the Order of the Stone. Yes, that's where OFTS come from. 
+            Back then, there was a game called Minecraft: Story Mode (the company that made it went bankrupt, so it's no longer available). 
+            It talks about the adventures of a team called the Order of the Stone. Yes, that's where OFTS come from. 
             Order oF The Store. I forgot the exact reason why I called it OFTS instead of OOTS or something else. I picked
             the name almost 10 years ago. I remember it comes from the Order of The Stone, but I forgot the details. 
             <br><br>
-            Back then, I really liked the Order of the Stone, and I imaged that I were a member of them, explorying the world
-            and defeating the evils. C'mon, everyone have a herotic childhood dream, right? So I added my name after the
+            Back then, I really liked the Order of the Stone, and I imagined that I was a member of them, exploring the world
+            and defeating the evils. C'mon, everyone has a heroic childhood dream, right? So I added my name after the
             acronym OFTS, so it becomes OFTS-CQM.
             <br><br>
-            In fact, not limited to Minecraft, most of my game accounts uses OFTS-CQM, including Github, because it was
-            originally used to store my mods' codes.
+            In fact, not limited to Minecraft, most of my game accounts uses OFTS-CQM, including GitHub, because it was
+            originally used to store my mods' code.
         </p>
     </div>
 
@@ -76,25 +76,25 @@ import Accordion from '@/components/Accordion.vue';
 
     <div class="paragraph">
         <p>
-            AI is the greatest tool ever invented, with the help of AI I gain unimaginable productivity. 
-            I have to be honest, without AI, I lost most of the efficiency, but with the help of AI, I can 
-            vibe-code or semi-vibe-code comprehensive systems and softwares. 
+            AI is the greatest tool ever invented; with the help of AI, I gain unimaginable productivity. 
+            I have to be honest, without AI, I lost most of my efficiency, but with the help of AI, I can 
+            vibe-code or semi-vibe-code comprehensive systems and software. 
         </p>
 
         <h2>Do you like to use AI?</h2>
 
         <p>
-            Actually, No... which may suprise you. This is my honest answer. You see, I study software engineering because coding is an
-            enjoyable thing. If its not enjoyable why would I choose this major? But, to me, the process of coding is 
+            Actually, no... which may surprise you. This is my honest answer. You see, I study software engineering because coding is an
+            enjoyable thing. If it's not enjoyable, why would I choose this major? But, to me, the process of coding is 
             what is enjoyable. The outcome, the result... not really important. Coding, debugging, 
             sitting in front of the computer wondering why this doesn't work, and sitting in front of the computer
-            celebrating it finally works, are all process of coding, which I consider to be enjoyable, 
+            celebrating it finally works, are all processes of coding, which I consider to be enjoyable, 
             even debugging for hours. 
             <br><br>
             As you can see, AI destroys this feeling. The entire enjoyable process is replaced. I don't care about 
             the result. If I made a project, I get a sense of pride and a sense of achievement. If I let AI do it, 
             I get nothing, because this is literally other people's work. Sometimes I struggle about this. 
-            If I don't use AI then I lost productivity. If I use AI then I lost fun. 
+            If I don't use AI, then I lose productivity. If I use AI, then I lose fun. 
         </p>
 
             
@@ -103,17 +103,19 @@ import Accordion from '@/components/Accordion.vue';
             Is this website made by AI?
         </h2>   
 
-        <p>Nope, not even a single line. AI is for efficiency and productivity, this site is for fun. </p> 
+        <p>Nope, not even a single line. AI is for efficiency and productivity; this site is for fun. </p> 
 
         <h2>
-            Then, are you skill OK with using AI in work?
+            Then, are you still OK with using AI in work?
         </h2>
 
-        <p>If AI is required to boost productivity, then definately. This is my work, and I have the 
-            responsibility to deliver my content on time with high quality. I am not an AI hater, nor an AI fun, 
+        <p>If AI is required to boost productivity, then definitely. This is my work, and I have the 
+            responsibility to deliver my content on time with high quality. I am not an AI hater, nor an AI fan; 
             it is just a tool that is unfortunately not my top choice. I still use AI, and know very well how to use AI. 
             <br><br>
-            It is the future of work, the future of software engineering. I am still very agile, able to adopt to new technology. 
+            It is the future of work, the future of software engineering. I am still very agile, able to adapt to new technology. 
+            <br><br>
+            I know this may sound contradictory, but sometimes humans are contradictory. 
         </p>
     </div>
 
