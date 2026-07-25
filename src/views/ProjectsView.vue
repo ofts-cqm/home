@@ -82,6 +82,7 @@
         strong understanding of computer graphics. 
       </ProjectCard>
     </div>
+    <p>BTW This website uses Vue if you are interested. You can find the source code <a href =https://github.com/ofts-cqm/home>Here</a>.</p>
   </main>
 </template>
 
