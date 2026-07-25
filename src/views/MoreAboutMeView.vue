@@ -14,9 +14,13 @@ import Accordion from '@/components/Accordion.vue';
             <span class="command">find ./ -name "MoreAboutMe*"</span>, this is the file you are looking for.</span>
             (Terminal is still WIP)
             <br><br>
-            However, if you just want to learn more about me, you are welcome to stay. 
-            Nothing here is technical, nor are they related to any of my skills. This file is more like a tree hole. 
+            I mean, nothing here is technical, nor are they related to any of my skills. This file is more like a tree hole. 
             I want to write something about my true thoughts, and hope someone will resonate with me. 
+            <br><br>
+            This file is very long, it is about my past, my stories, my thoughts, 
+            it's more like a blog rather than a simple "More About Me" page. 
+            However, if you really want to learn more about me, to learn why I chose coding, why I 
+            call myself "OFTS"... You are welcome to stay! You can find everything about me here. 
         </p>
     </div>
 
@@ -72,6 +76,24 @@ import Accordion from '@/components/Accordion.vue';
         </p>
     </div>
 
+    <h1>Any interesting stories about Minecraft and coding?</h1>
+
+    <div class="paragraph">
+        <p>
+            As we all know, Minecraft (Java Edition) uses Java! Therefore! If I want to make mods for Minecraft, 
+            I should learn Java! That was exactly what I thought! So, my first programming language is Java...Script!
+            <br><br>
+            Yes that is the real story. I searched java and the first thing poped up was javascript. 
+            <br><br>
+            I thought javascript is some kind of formal name of Java, because you know, programmers like to use abbreviations. 
+            <br><br>
+            Literally, I spent four months learning javascript and still couldn't read Minecraft's source code. 
+            I told myself that it is gonna be hard, not everyone can be a programmer, it probabaly takes a year or two 
+            to be proficient enough to read Minecraft's code... UNTIL I REALIZED I WAS LEARNING THE COMPLETELY WRONG LANGUAGE!!!
+            FUUUUUUUUUUU**
+        </p>
+    </div>
+
     <h1>What do you think about AI?</h1>
 
     <div class="paragraph">
@@ -91,19 +113,24 @@ import Accordion from '@/components/Accordion.vue';
             celebrating it finally works, are all processes of coding, which I consider to be enjoyable, 
             even debugging for hours. 
             <br><br>
-            As you can see, AI destroys this feeling. The entire enjoyable process is replaced. I don't care about 
-            the result. If I made a project, I get a sense of pride and a sense of achievement. If I let AI do it, 
+            As you can see, AI destroys this feeling. Coding is like a video game, the enjoyable part is not the final 
+            "Thank you for playing" screen, the enjoyable part is the process itself. If there is a button that skips the 
+            entire process and jump directly to the final scene, would you press that button? You won't. 
+            <br><br>
+            If I made a project, I get a sense of pride and a sense of achievement. If I let AI do it, 
             I get nothing, because this is literally other people's work. Sometimes I struggle about this. 
             If I don't use AI, then I lose productivity. If I use AI, then I lose fun. 
         </p>
-
-            
 
         <h2>
             Is this website made by AI?
         </h2>   
 
-        <p>Nope, not even a single line. AI is for efficiency and productivity; this site is for fun. </p> 
+        <p>
+            Nope, not even a single line. AI is for efficiency and productivity, this site is for fun. 
+            BTW this is also why none of the buttons are functioning. I am just lazy. Except for the file button which allows you
+            to collaps and open the file explorer. 
+        </p> 
 
         <h2>
             Then, are you still OK with using AI in work?
@@ -113,9 +140,23 @@ import Accordion from '@/components/Accordion.vue';
             responsibility to deliver my content on time with high quality. I am not an AI hater, nor an AI fan; 
             it is just a tool that is unfortunately not my top choice. I still use AI, and know very well how to use AI. 
             <br><br>
-            It is the future of work, the future of software engineering. I am still very agile, able to adapt to new technology. 
+            It is the future of work, the future of software engineering. I am still very agile, able to adopt to new technology. 
+            Back to the button + video game metaphor, if you are getting paid to speadrun videogames, would you press that button? 
+            Of course! I will press that button to death. 
+        </p>
+    </div>
+
+    <h1>Why "Macrohard Virtual Studio"?</h1>
+
+    <div class="paragraph">
+        <p>
+            I want to make my website unique and stand out. I want to make a website that looks like a programmer's website. 
+            It shouldn't be a generic one nor should it looks like something vibe-coded in 10 minutes. 
             <br><br>
-            I know this may sound contradictory, but sometimes humans are contradictory. 
+            It should be something technical, related to programmers, related to coding. I couldn't image what design 
+            should I choose, but I had a basic outline of what I should put on my website. Therefore, I opened VS Code 
+            and decides to write something down first, and then I realized this is the exact thing I am looking for. 
+            So yes, I created this Macrohard Virtual Studio v6.7.0. Renamed it because I don't wanna get sued by Microsoft. 
         </p>
     </div>
 
