@@ -29,7 +29,7 @@ const defaultColor =
     "FORTRAN": "#4d41b1", 
     "VHDL": "#adb2cb", 
     "Ada": "#02f88c", 
-    "Unity3D Asset": "#ab69a1", 
+    "Unity": "#ab69a1", 
     "Assembly": "#6E4C13", 
     "Arduino": "#bd79d1", 
     "C Sharp": "#178600", 

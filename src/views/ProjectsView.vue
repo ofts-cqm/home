@@ -31,6 +31,18 @@
     </div>
     <h1>what About Your Personal Projects?</h1>
     <div class="projects">
+      <ProjectCard src="minecraft_unity.png" :languages="['C Sharp', 'Unity']">
+        <template #name>Unity Based Minecraft</template>
+        A Minecraft built using unity, supporting most features including perlin-noise-based terrain generation,
+        async chunk loading, transparent block rendering, slabs (and other half block) rendering, and inventory UI. 
+        <br>
+        Utilized customized shaders to render waters and transparent textures. Explored shader designing and modern
+        game architectures like ECS. 
+        <br>
+        Note that the items in the hotbar are sprites baked in runtime, maximizing rendering efficiency while
+        keeping the 3D model of blocks. 
+      </ProjectCard>
+
       <ProjectCard src="mcgif.png" :languages="['React', 'JavaScript', 'Java', 'Kotlin', 'Ktor', 'JavaFx', 'MySql']">
         <template #name>Minecraft Skin Animator</template>
         I have a website for a Minecraft skin animation generator, 
@@ -73,13 +85,6 @@
         and token generator. Can output tokenized grammar trees, intermediate languages, or assembly code. Can be DIYed to 
         fit various assembly languages. Due to the complexity of linking, this compiler only generates assembly code;
         it cannot link against system libraries. 
-      </ProjectCard>
-
-      <ProjectCard src="minecraft.png" :languages="['Java']">
-        <template #name>Minecraft</template>
-        A Minecraft built using my own Java 3D CPU Render. Supports ~40 blocks. Supports async chunk loading and saving. 
-        Demonstrating strong understanding of the rendering pipeline, shaders, and render structures and implementations, and 
-        strong understanding of computer graphics. 
       </ProjectCard>
     </div>
     <p>BTW This website uses Vue if you are interested. You can find the source code <a href =https://github.com/ofts-cqm/home>Here</a>.</p>
