@@ -1,40 +1,37 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import EmptyView from '@/views/EmptyView.vue'
+import {
+  createRouter,
+  createWebHistory,
+  type RouteRecordRaw,
+} from "vue-router";
+import EmptyView from "@/views/EmptyView.vue";
+import MarkdownView from "@/views/MarkdownView.vue";
+import { contentDocuments } from "@/content/registry";
+
+const contentRoutes: RouteRecordRaw[] = contentDocuments.map((document) => ({
+  path: document.route,
+  name: `document-${document.id}`,
+  component: MarkdownView,
+  props: { documentId: document.id },
+  meta: {
+    documentId: document.id,
+    label: document.label,
+  },
+}));
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'default',
+      path: "/",
+      name: "default",
       component: EmptyView,
     },
+    ...contentRoutes,
     {
-      path: '/contact',
-      name: 'contact',
-      meta: { label: 'Contact.md'},
-      component: () => import('../views/ContactView.vue')
-    },
-    {
-      path: '/about-me',
-      name: 'about-me',
-      meta: { label: 'MoreAboutMe.md'},
-      component: () => import('../views/MoreAboutMeView.vue')
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: HomeView,
-      meta: { label: 'README.md' }
-    },
-    {
-      path: '/projects',
-      name: 'projects',
-      meta: { label: 'Projects.md' },
-      component: () => import('../views/ProjectsView.vue'),
+      path: "/:pathMatch(.*)*",
+      redirect: "/home",
     },
   ],
-})
+});
 
-export default router
+export default router;
