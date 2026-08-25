@@ -185,7 +185,7 @@
 
 .md-flip-card-front h3 {
   align-content: center;
-  font-size: clamp(1.25rem, 8cqw, 2.6rem);
+  font-size: clamp(1.25rem, 1.7cqw, 2.6rem);
   height: 15%;
   margin: 0;
 }
@@ -223,7 +223,7 @@
   border: 5px solid #000;
   display: flex;
   flex-direction: column;
-  font-size: clamp(0.8rem, 4.2cqw, 1.1rem);
+  font-size: clamp(0.8rem, 1cqw, 1.1rem);
   justify-content: center;
   overflow: auto;
   padding: 1rem;
