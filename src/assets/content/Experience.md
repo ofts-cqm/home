@@ -6,7 +6,7 @@ order: 20
 
 # My Work Experience
 
-:::: columns flex="4 6"
+:::: columns flex="3 7"
 ::: column
 ![Ascendance Foundry](../pictures/ascendance.jpeg)
 :::

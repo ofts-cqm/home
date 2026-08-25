@@ -234,7 +234,14 @@
   margin: 0.5rem 0;
 }
 
-.markdown-document[data-document-id="experience"] .md-columns:first-of-type img,
+.markdown-document[data-document-id="experience"] .md-columns:first-of-type img {
+  aspect-ratio: 1;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+}
+
 .markdown-body img[alt="University of Waterloo"] {
   aspect-ratio: 1;
   border: 6px solid #fff;
