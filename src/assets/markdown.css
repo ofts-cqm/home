@@ -1,0 +1,290 @@
+.markdown-document {
+  width: 100%;
+}
+
+.markdown-body {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  color: var(--color-heading);
+  line-height: 1.25;
+  margin: 2rem 0 1rem;
+}
+
+.markdown-body h1:first-child {
+  margin-top: 0;
+}
+
+.markdown-body p,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body blockquote,
+.markdown-body pre {
+  margin: 1rem 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2rem;
+}
+
+.markdown-body blockquote {
+  border-left: 4px solid #555;
+  color: var(--vt-c-text-dark-2);
+  padding-left: 1rem;
+}
+
+.markdown-body code {
+  background: dimgrey;
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.35rem;
+}
+
+.markdown-body pre {
+  background: var(--color-background-dark);
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.markdown-body pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.markdown-body img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.md-columns {
+  align-items: center;
+  display: flex;
+  gap: 3rem;
+  margin: 5vh 0;
+  width: 100%;
+}
+
+.md-column {
+  min-width: 0;
+}
+
+.md-column:first-child {
+  flex: var(--md-left-flex, 1) 1 0;
+}
+
+.md-column:last-child {
+  flex: var(--md-right-flex, 1) 1 0;
+}
+
+.md-columns-stacked {
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.md-columns-stacked > .md-column {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.md-grid {
+  display: grid;
+  gap: 5vh 5%;
+  grid-template-columns: repeat(var(--md-grid-columns, 1), minmax(0, 1fr));
+  margin: 5vh 0;
+}
+
+.md-grid-item {
+  min-width: 0;
+}
+
+.md-accordion {
+  margin: 2rem 0 6rem;
+}
+
+.md-accordion summary {
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  list-style-position: inside;
+  padding: 1rem;
+  transition: background-color 0.2s;
+}
+
+.md-accordion summary:hover,
+.md-accordion summary:focus-visible {
+  background: #444;
+}
+
+.md-accordion-panel {
+  background: #000;
+  padding: 1rem;
+}
+
+.md-accordion-panel img {
+  max-height: 100vh;
+  object-fit: contain;
+  width: auto;
+}
+
+.md-flip-card {
+  aspect-ratio: 0.7;
+  cursor: pointer;
+  min-width: 0;
+  perspective: 1200px;
+  width: 100%;
+}
+
+.md-flip-card-inner {
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.75s;
+  width: 100%;
+}
+
+@media (hover: hover) {
+  .md-flip-card:hover .md-flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.md-flip-card:focus-visible {
+  outline: 3px solid #3376ce;
+  outline-offset: 4px;
+}
+
+.md-flip-card.is-flipped .md-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.md-flip-card-front,
+.md-flip-card-back {
+  backface-visibility: hidden;
+  border-radius: 10px;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.md-flip-card-front {
+  align-items: flex-start;
+  background: var(--color-background-soft);
+  border: 10px solid var(--color-background-soft);
+  display: flex;
+  flex-direction: column;
+}
+
+.md-flip-card-front h3 {
+  align-content: center;
+  font-size: clamp(1.25rem, 8cqw, 2.6rem);
+  height: 15%;
+  margin: 0;
+}
+
+.md-flip-card-front > img {
+  height: 70%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.md-language-list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  height: 15%;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.md-language-chip {
+  align-items: center;
+  background: var(--language-color);
+  border-radius: 0.5rem;
+  display: inline-flex;
+  font-size: clamp(0.7rem, 5cqw, 1rem);
+  justify-content: center;
+  line-height: 1.2;
+  padding: 0.15rem 0.35rem;
+}
+
+.md-flip-card-back {
+  align-items: center;
+  background: var(--color-background-dark);
+  border: 5px solid #000;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(0.8rem, 4.2cqw, 1.1rem);
+  justify-content: center;
+  overflow: auto;
+  padding: 1rem;
+  transform: rotateY(180deg);
+}
+
+.md-flip-card-back p {
+  margin: 0.5rem 0;
+}
+
+.markdown-document[data-document-id="experience"] .md-columns:first-of-type img,
+.markdown-body img[alt="University of Waterloo"] {
+  aspect-ratio: 1;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.markdown-document[data-document-id="readme"] .md-column h2 {
+  text-align: right;
+}
+
+.markdown-document[data-document-id="contact"] .markdown-body p {
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+  gap: 0.65rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.markdown-document[data-document-id="contact"] .markdown-body p > img {
+  flex: 0 0 auto;
+  height: 1.8rem;
+  width: auto;
+}
+
+.markdown-document[data-document-id="contact"] .markdown-body a {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.markdown-error {
+  background: #3b1717;
+  border: 1px solid #c66;
+  padding: 1rem;
+}
+
+.markdown-error pre {
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 600px) {
+  .md-columns {
+    gap: 1.5rem;
+  }
+
+  .markdown-document[data-document-id="contact"] .markdown-body p {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
