@@ -123,16 +123,6 @@ import Accordion from '@/components/Accordion.vue';
         </p>
 
         <h2>
-            Is this website made by AI?
-        </h2>   
-
-        <p>
-            Nope, not even a single line. AI is for efficiency and productivity, this site is for fun. 
-            BTW this is also why none of the buttons are functioning. I am just lazy. Except for the file button which allows you
-            to collaps and open the file explorer. 
-        </p> 
-
-        <h2>
             Then, are you still OK with using AI in work?
         </h2>
 
