@@ -16,10 +16,10 @@ order: 50
 
 `route` becomes the public URL, `label` appears in the file explorer, and `order` controls explorer ordering. Routes and labels must be unique. Raw HTML is intentionally disabled.
 
-Images can stay in `src/assets` and use paths relative to the Markdown file:
+Images belong in `src/assets/pictures` (PNG, JPG, or JPEG) or `src/assets/svgs` (SVG) and use paths relative to the Markdown file:
 
 ```md
-![Description](../image.jpg)
+![Description](../pictures/image.png)
 ```
 
 ### Two columns
@@ -67,7 +67,7 @@ Content shown inside the accordion.
 ### Flip card
 
 ```md
-::: flip-card title="Project name" image="../project.png" alt="Project screenshot" languages="Vue, TypeScript"
+::: flip-card title="Project name" image="../pictures/project.png" alt="Project screenshot" languages="Vue, TypeScript"
 Markdown shown on the back of the card.
 :::
 ```

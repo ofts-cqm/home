@@ -55,7 +55,7 @@ Right
 ::::
 
 :::: grid columns=2
-::: flip-card title="Card" image="../me.jpg" alt="Portrait" languages="Java, Vue"
+::: flip-card title="Card" image="../pictures/me.jpg" alt="Portrait" languages="Java, Vue"
 Back
 :::
 ::::

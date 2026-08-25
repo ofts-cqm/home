@@ -8,7 +8,7 @@ order: 10
 
 :::: columns flex="4 6"
 ::: column
-![OFTS_CQM](../me.jpg)
+![OFTS_CQM](../pictures/me.jpg)
 
 *Picture by my highschool friend Wilson*
 :::
@@ -40,7 +40,7 @@ I currently study Software Engineering in University of Waterloo. It is definate
 :::
 
 ::: column
-![University of Waterloo](../linkedin.png)
+![University of Waterloo](../pictures/linkedin.png)
 
 *Picture by University of Waterloo*
 :::

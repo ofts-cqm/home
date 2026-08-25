@@ -26,7 +26,7 @@ Note that the original video was lost; this is an archive.
 :::
 
 ::: column
-![Archived Minecraft modpack](../muyu.jpg)
+![Archived Minecraft modpack](../pictures/muyu.jpg)
 :::
 ::::
 
@@ -83,7 +83,7 @@ So yes, I created this Macrohard Virtual Studio v6.7.0. Renamed it because I don
 ## Here is a meme from reddit:
 
 ::: accordion title="Click to see..." open=false
-![Software Engineering meme](../meme.png)
+![Software Engineering meme](../pictures/meme.png)
 :::
 
 # I heard, you are in a band?
@@ -98,6 +98,6 @@ It is very fun, I recommend everyone to join a band. I've been playing music sin
 :::
 
 ::: column
-![University of Waterloo Concert Band Club](../band.jpg)
+![University of Waterloo Concert Band Club](../pictures/band.jpg)
 :::
 ::::

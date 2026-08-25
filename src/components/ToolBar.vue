@@ -40,21 +40,21 @@ const control = useUIStore()
 
         <!--se webring-->
         <a href="https://se-webring.xyz/" target="_blank" rel="noopener noreferrer">
-            <img src="../assets/webring.svg">
+            <img src="../assets/svgs/webring.svg">
         </a>
 
         <!--se30 webring-->
         <a href="https://se30webring.com?from=https://ofts-cqm.vercel.app/&dir=prev">
-            <img src="../assets/arrowUp.svg">
+            <img src="../assets/svgs/arrowUp.svg">
         </a>
 
         <a href="https://se30webring.com" target="_blank" rel="noopener noreferrer">
-            <img src="../assets/se30.svg">
+            <img src="../assets/svgs/se30.svg">
         </a>
 
         <!--se30 webring-->
         <a href="https://se30webring.com?from=https://ofts-cqm.vercel.app/&dir=next">
-            <img src="../assets/arrowDown.svg">
+            <img src="../assets/svgs/arrowDown.svg">
         </a>
     </div>
 </template>
