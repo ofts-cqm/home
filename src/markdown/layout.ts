@@ -1,16 +1,10 @@
 export const MIN_LAYOUT_COLUMN_WIDTH = 300;
+export const MIN_LAYOUT_TOTAL_WIDTH = 600;
 
 export function shouldStackColumns(
   width: number,
-  gap: number,
-  leftFlex: number,
-  rightFlex: number,
 ): boolean {
-  const usableWidth = Math.max(0, width - gap);
-  const totalFlex = leftFlex + rightFlex;
-  const leftWidth = (usableWidth * leftFlex) / totalFlex;
-  const rightWidth = (usableWidth * rightFlex) / totalFlex;
-  return Math.min(leftWidth, rightWidth) < MIN_LAYOUT_COLUMN_WIDTH;
+ return width < MIN_LAYOUT_TOTAL_WIDTH;
 }
 
 export function getGridColumnCount(

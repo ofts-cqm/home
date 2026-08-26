@@ -40,7 +40,7 @@ function resizeColumns(element: HTMLElement, width: number): void {
   element.style.setProperty("--md-right-flex", String(rightFlex));
   element.classList.toggle(
     "md-columns-stacked",
-    shouldStackColumns(width, gap, leftFlex, rightFlex),
+    shouldStackColumns(width),
   );
 }
 

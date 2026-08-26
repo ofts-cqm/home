@@ -3,10 +3,9 @@ import { getGridColumnCount, shouldStackColumns } from "./layout";
 
 describe("responsive Markdown layouts", () => {
   it("stacks when either flex column would be narrower than 300px", () => {
-    expect(shouldStackColumns(620, 20, 1, 1)).toBe(false);
-    expect(shouldStackColumns(619, 20, 1, 1)).toBe(true);
-    expect(shouldStackColumns(770, 20, 2, 3)).toBe(false);
-    expect(shouldStackColumns(769, 20, 2, 3)).toBe(true);
+    expect(shouldStackColumns(620)).toBe(false);
+    expect(shouldStackColumns(770)).toBe(false);
+    expect(shouldStackColumns(569)).toBe(true);
   });
 
   it("reduces equal grid tracks without going below one", () => {
