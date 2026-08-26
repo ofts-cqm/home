@@ -36,7 +36,7 @@ Right-side Markdown
 ::::
 ```
 
-`flex` defaults to `1 1`. The columns stack when either would be narrower than 300px.
+`flex` defaults to `1 1`. The columns stack when the total width is less than 600px
 
 ### Grid
 
