@@ -1,20 +1,28 @@
 <template>
-  <div class="bg" v-if="timeLeft > 0">
-    <div class="window">
-      <div class="title">
-        <h3>Macrohard Virtual Studio</h3>
-        <p v-if="timeLeft > 1500">Connecting to Remote Host...</p>
-        <p v-else>Opening Codespace...</p>
+  <div class="editor-surface">
+    <div class="bg" v-if="timeLeft > 0">
+      <div class="window">
+        <div class="title">
+          <h3>Macrohard Virtual Studio</h3>
+          <p v-if="timeLeft > 1500">Connecting to Remote Host...</p>
+          <p v-else>Opening Codespace...</p>
+        </div>
+        <div
+          class="progress_bar"
+          :style="{ width: `${(3000 - timeLeft) / 30}%` }"
+        ></div>
       </div>
-      <div
-        class="progress_bar"
-        :style="{ width: `${(3000 - timeLeft) / 30}%` }"
-      ></div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.editor-surface {
+  width: 100%;
+  height: 100%;
+  background-color: #171717;
+}
+
 .bg {
   position: absolute;
   background-color: #ffffff60;

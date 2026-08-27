@@ -1,7 +1,30 @@
+<script setup lang="ts">
+import { useUIStore } from "./../stores/control";
+
+const control = useUIStore();
+</script>
+
 <template>
     <div class="main">
         <div class="header">
-            <pre class="tools">Code  File  Edit  Selection  View  Go  Run  Terminal  Window  Help</pre>
+            <nav class="tools" aria-label="Application menu">
+                <span>Code</span>
+                <span>File</span>
+                <span>Edit</span>
+                <button
+                    type="button"
+                    class="tool-button"
+                    aria-controls="integrated-terminal"
+                    :aria-expanded="control.showTerminal"
+                    @click="control.toggleTerminal()"
+                >Terminal</button>
+                <span>Selection</span>
+                <span>View</span>
+                <span>Go</span>
+                <span>Run</span>
+                <span>Window</span>
+                <span>Help</span>
+            </nav>
             <p class="title">Macrohard Virtual Studio Code v6.7.0</p>
         </div>
 
@@ -51,9 +74,34 @@
   flex-shrink: 2;
   flex-direction: row;
   display: flex;
-  gap: 1rem;
+  gap: 0.85rem;
   overflow: hidden;
-  white-space: pre-wrap;
+  align-items: center;
+  white-space: nowrap;
+  font-family: monospace;
+}
+
+.tools > * {
+  flex: 0 0 auto;
+}
+
+.tool-button {
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.tool-button:hover {
+  background-color: var(--color-background-soft);
+}
+
+.tool-button:focus-visible {
+  outline: 1px solid #c5c5c5;
+  outline-offset: 2px;
 }
 
 .content {

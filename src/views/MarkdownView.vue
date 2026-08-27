@@ -15,5 +15,11 @@ const document = computed(() => {
 </script>
 
 <template>
-  <MarkdownRenderer :document="document" />
+  <MarkdownRenderer class="editor-surface" :document="document" />
 </template>
+
+<style scoped>
+.editor-surface {
+  background-color: #171717;
+}
+</style>
