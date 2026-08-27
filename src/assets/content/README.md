@@ -28,6 +28,8 @@ By the way, I am more a back-end guy, so this website is kinda shitty. Don't bla
 :::
 ::::
 
+*Hint: you can click the "Terminal" tab above and explore my codespace in a terminal!*
+
 ## What’s Your Tech Stack?
 
 I am proficient in common OOP languages such as C# and Java, as well as game engines like Unity. Other than video game stuff, I also do website development. I am proficient in front-end frameworks such as ReactJS and Vue, with other technologies such as css, tailwind css, and html. For background, no Spring Boot yet, but I can use other common Java/Kotlin frameworks such as Javelin and Ktor, as well as Python frameworks such as Flask. I have Android development experience with Android Studio and Java/Kotlin, and desktop development with JavaFX, Java Swing, or Qt/QML.
