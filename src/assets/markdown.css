@@ -234,7 +234,7 @@
   margin: 0.5rem 0;
 }
 
-.markdown-document[data-document-id="experience"] .md-columns:first-of-type img {
+.markdown-document[data-document-id="work-experience"] .md-columns:first-of-type img {
   aspect-ratio: 1;
   border: 6px solid #fff;
   border-radius: 50%;

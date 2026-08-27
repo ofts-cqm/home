@@ -6,7 +6,7 @@ order: 30
 
 # What is this?
 
-These are a bit of my personal stories, if you are interested. If you are an HR looking for my projects and experiences, then you are probably in the wrong file. Open the terminal and type `find ./ -name "MoreAboutMe*"`, this is the file you are looking for. (Terminal is still WIP)
+These are a bit of my personal stories, if you are interested. If you are an HR looking for my projects and experiences, then you are probably in the wrong file. 
 
 I mean, nothing here is technical, nor are they related to any of my skills. This file is more like a tree hole. I want to write something about my true thoughts, and hope someone will resonate with me.
 
@@ -51,24 +51,6 @@ Yes that is the real story. I searched java and the first thing poped up was jav
 I thought javascript is some kind of formal name of Java, because you know, programmers like to use abbreviations.
 
 Literally, I spent four months learning javascript and still couldn't read Minecraft's source code. I told myself that it is gonna be hard, not everyone can be a programmer, it probabaly takes a year or two to be proficient enough to read Minecraft's code... UNTIL I REALIZED I WAS LEARNING THE COMPLETELY WRONG LANGUAGE!!! FUUUUUUUUUUU**
-
-# What do you think about AI?
-
-AI is the greatest tool ever invented; with the help of AI, I gain unimaginable productivity. I have to be honest, without AI, I lost most of my efficiency, but with the help of AI, I can vibe-code or semi-vibe-code comprehensive systems and software.
-
-## Do you like to use AI?
-
-Actually, no... which may surprise you. This is my honest answer. You see, I study software engineering because coding is an enjoyable thing. If it's not enjoyable, why would I choose this major? But, to me, the process of coding is what is enjoyable. The outcome, the result... not really important. Coding, debugging, sitting in front of the computer wondering why this doesn't work, and sitting in front of the computer celebrating it finally works, are all processes of coding, which I consider to be enjoyable, even debugging for hours.
-
-As you can see, AI destroys this feeling. Coding is like a video game, the enjoyable part is not the final "Thank you for playing" screen, the enjoyable part is the process itself. If there is a button that skips the entire process and jump directly to the final scene, would you press that button? You won't.
-
-If I made a project, I get a sense of pride and a sense of achievement. If I let AI do it, I get nothing, because this is literally other people's work. Sometimes I struggle about this. If I don't use AI, then I lose productivity. If I use AI, then I lose fun.
-
-## Then, are you still OK with using AI in work?
-
-If AI is required to boost productivity, then definitely. This is my work, and I have the responsibility to deliver my content on time with high quality. I am not an AI hater, nor an AI fan; it is just a tool that is unfortunately not my top choice. I still use AI, and know very well how to use AI.
-
-It is the future of work, the future of software engineering. I am still very agile, able to adopt to new technology. Back to the button + video game metaphor, if you are getting paid to speadrun videogames, would you press that button? Of course! I will press that button to death.
 
 # Why "Macrohard Virtual Studio"?
 

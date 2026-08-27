@@ -1,24 +1,8 @@
 ---
 route: /projects
-label: Experience.md
+label: Projects.md
 order: 20
 ---
-
-# My Work Experience
-
-:::: columns flex="3 7"
-::: column
-![Ascendance Foundry](../pictures/ascendance.jpeg)
-:::
-
-::: column
-My first and only work experience is [Ascendance Foundry](https://www.ascendancefoundry.com).
-
-Ascendance Foundry is a consulting firm that brings automation to various industries. We believe that, with the help of AI, any junior programmer is capable of building complex systems. Therefore, Ascendance Foundry focuses on training and developing junior software engineers as "Forward Deployed Engineers" (like me), sending them to various customers to develop automated workflows and bring AI into their systems.
-
-With the proper usage of AI, junior software engineers can show unimaginable productivity, and are capable of building maintainable and scalable customized softwares. In the past, a customized program required a large time spending a lot of time and resources to build, while AI significantly reduces the cost, making customized software affordable to all small-sized companies.
-:::
-::::
 
 # What About Your Personal Projects?
 
@@ -29,6 +13,8 @@ A Minecraft built using unity, supporting most features including perlin-noise-b
 Utilized customized shaders to render waters and transparent textures. Explored shader designing and modern game architectures like ECS.
 
 Note that the items in the hotbar are sprites baked in runtime, maximizing rendering efficiency while keeping the 3D model of blocks.
+
+You can find the repo [here](https://github.com/ofts-cqm/UnityCraft). Note that this repo does not include textures because it uses some of Minecraft's textures. 
 :::
 
 ::: flip-card title="Minecraft Skin Animator" image="../pictures/mcgif.png" alt="Minecraft Skin Animator" languages="React, JavaScript, Java, Kotlin, Ktor, JavaFx, MySql"
