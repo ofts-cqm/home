@@ -72,22 +72,22 @@ import { useUIStore } from "./../stores/control";
 
 const timeLeft = ref(3000); // countdown start (seconds)
 const control = useUIStore();
-let intervalId: number;
-let resizeTimer: number;
+let intervalId: number | undefined;
+let resizeTimer: number | undefined;
 
 control.showExplorer = false;
 
 onMounted(() => {
-  intervalId = setInterval(() => {
+  intervalId = window.setInterval(() => {
     if (timeLeft.value > 0) {
       timeLeft.value -= 10;
     } else {
-      clearInterval(intervalId);
+      window.clearInterval(intervalId);
       control.showExplorer = true;
 
       document.body.classList.add("no-transition");
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(() => {
         document.body.classList.remove("no-transition");
       }, 150);
       router.push({ path: "/home" });
@@ -96,6 +96,6 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  clearInterval(intervalId);
+  window.clearInterval(intervalId);
 });
 </script>

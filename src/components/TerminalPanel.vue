@@ -1,17 +1,14 @@
 <script setup lang="ts">
-import {
-  nextTick,
-  onBeforeUnmount,
-  onMounted,
-  ref,
-  watch,
-} from "vue";
+import { nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue";
+import type { PortfolioShell } from "../terminal/portfolioShell";
 
 interface TerminalEntry {
+  directory: string;
   id: number;
   command: string;
   submittedAt: string;
-  output: string;
+  stderr: string;
+  stdout: string;
 }
 
 const props = defineProps<{
@@ -26,14 +23,22 @@ const FASTFETCH_GREETING = String.raw`      /\          guest@archlinux
  /   |  |   \     uptime  67h 76m
 /_-''    ''-_\    memory  5.35 GiB / 2147482647 GiB (0%)`;
 
+const DEFAULT_TERMINAL_DIRECTORY = "/assets/content";
+
 const entries = ref<TerminalEntry[]>([]);
 const draft = ref("");
 const input = ref<HTMLInputElement>();
 const viewport = ref<HTMLElement>();
 const currentTime = ref(formatLocalTime());
+const currentDirectory = ref(DEFAULT_TERMINAL_DIRECTORY);
 
 let nextEntryId = 0;
 let clockTimer: number | undefined;
+let shell: PortfolioShell | undefined;
+let shellPromise: Promise<PortfolioShell> | undefined;
+const commandHistory: string[] = [];
+let historyIndex = -1;
+let draftBeforeHistory = "";
 
 function formatLocalTime(date = new Date()): string {
   const hours = String(date.getHours()).padStart(2, "0");
@@ -41,8 +46,11 @@ function formatLocalTime(date = new Date()): string {
   return `${hours}:${minutes}`;
 }
 
-function formatPrompt(time: string): string {
-  return `guest > .../contents > ${time} > `;
+function formatPrompt(
+  time: string,
+  directory = currentDirectory.value,
+): string {
+  return `guest > ...${directory} > ${time} > `;
 }
 
 function scrollToLatestEntry(): void {
@@ -53,18 +61,106 @@ function scrollToLatestEntry(): void {
 
 async function submitCommand(): Promise<void> {
   const command = draft.value;
+  const submittedAt = formatLocalTime();
+  const submittedDirectory = currentDirectory.value;
+
+  if (!command.trim()) {
+    draft.value = "";
+    return;
+  }
+
+  commandHistory.push(command);
+  historyIndex = -1;
+  draftBeforeHistory = "";
+
+  if (command.trim() === "clear") {
+    entries.value = [];
+    draft.value = "";
+    return;
+  }
+
+  let stdout = "";
+  let stderr = "";
+
+  try {
+    const result = await getShell().then((portfolioShell) =>
+      portfolioShell.execute(command),
+    );
+
+    currentDirectory.value = result.directory;
+    stdout = result.stdout;
+    stderr = result.stderr;
+  } catch (error) {
+    stderr = `terminal: ${error instanceof Error ? error.message : "unable to execute command"}\n`;
+  }
 
   entries.value.push({
+    directory: submittedDirectory,
     id: nextEntryId++,
     command,
-    submittedAt: formatLocalTime(),
-    output: command,
+    submittedAt,
+    stderr,
+    stdout,
   });
 
   draft.value = "";
   await nextTick();
   scrollToLatestEntry();
   input.value?.focus({ preventScroll: true });
+}
+
+function navigateHistory(event: KeyboardEvent, direction: -1 | 1): void {
+  if (event.isComposing || commandHistory.length === 0) {
+    return;
+  }
+
+  if (historyIndex === -1) {
+    if (direction === 1) {
+      return;
+    }
+
+    draftBeforeHistory = draft.value;
+    historyIndex = commandHistory.length - 1;
+  } else {
+    const nextIndex = historyIndex + direction;
+
+    if (nextIndex >= commandHistory.length) {
+      historyIndex = -1;
+      draft.value = draftBeforeHistory;
+      draftBeforeHistory = "";
+      event.preventDefault();
+      return;
+    }
+
+    historyIndex = Math.max(0, nextIndex);
+  }
+
+  draft.value = commandHistory[historyIndex] ?? "";
+  event.preventDefault();
+}
+
+function resetHistoryNavigation(): void {
+  if (historyIndex !== -1) {
+    historyIndex = -1;
+    draftBeforeHistory = "";
+  }
+}
+
+function getShell(): Promise<PortfolioShell> {
+  if (shell) {
+    return Promise.resolve(shell);
+  }
+
+  shellPromise ??= import("../terminal/portfolioShell")
+    .then((module) => {
+      return module.createPortfolioShell();
+    })
+    .then((portfolioShell) => {
+      shell = portfolioShell;
+      return portfolioShell;
+    });
+
+  return shellPromise;
 }
 
 function focusInput(event: MouseEvent): void {
@@ -92,6 +188,8 @@ watch(
 
     await nextTick();
     scrollToLatestEntry();
+
+    void getShell();
 
     if (!window.matchMedia("(max-width: 800px)").matches) {
       input.value?.focus({ preventScroll: true });
@@ -123,21 +221,34 @@ onBeforeUnmount(() => {
     <div class="terminal-title">Terminal</div>
 
     <div ref="viewport" class="terminal-viewport" @click="focusInput">
-      <pre class="fastfetch" aria-label="System information">{{ FASTFETCH_GREETING }}</pre>
+      <pre class="fastfetch" aria-label="System information">{{
+        FASTFETCH_GREETING
+      }}</pre>
 
       <div class="terminal-history" role="log" aria-live="polite">
         <div v-for="entry in entries" :key="entry.id" class="history-entry">
           <div class="terminal-line">
-            <span class="prompt">{{ formatPrompt(entry.submittedAt) }}</span>
+            <span class="prompt">{{
+              formatPrompt(entry.submittedAt, entry.directory)
+            }}</span>
             <span class="committed-command">{{ entry.command }}</span>
           </div>
-          <pre v-if="entry.output.length > 0" class="command-output">{{ entry.output }}</pre>
+          <pre v-if="entry.stdout.length > 0" class="command-output">{{
+            entry.stdout
+          }}</pre>
+          <pre v-if="entry.stderr.length > 0" class="command-error">{{
+            entry.stderr
+          }}</pre>
         </div>
       </div>
 
       <form class="terminal-line active-line" @submit.prevent="submitCommand">
-        <label class="visually-hidden" for="terminal-command">Terminal command</label>
-        <span class="prompt" aria-hidden="true">{{ formatPrompt(currentTime) }}</span>
+        <label class="visually-hidden" for="terminal-command"
+          >Terminal command</label
+        >
+        <span class="prompt" aria-hidden="true">{{
+          formatPrompt(currentTime)
+        }}</span>
         <input
           id="terminal-command"
           ref="input"
@@ -149,7 +260,12 @@ onBeforeUnmount(() => {
           autocorrect="off"
           enterkeyhint="send"
           spellcheck="false"
-          @keydown.enter="($event as KeyboardEvent).isComposing && $event.preventDefault()"
+          @input="resetHistoryNavigation"
+          @keydown.arrow-down="navigateHistory($event, 1)"
+          @keydown.enter="
+            ($event as KeyboardEvent).isComposing && $event.preventDefault()
+          "
+          @keydown.arrow-up="navigateHistory($event, -1)"
         />
       </form>
     </div>
@@ -240,6 +356,15 @@ onBeforeUnmount(() => {
   width: 100%;
   color: #c5c5c5;
   font: inherit;
+}
+
+.command-error {
+  width: 100%;
+  margin: 0;
+  color: #f48771;
+  font: inherit;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 .active-line {
