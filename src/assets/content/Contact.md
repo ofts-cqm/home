@@ -1,7 +1,7 @@
 ---
 route: /contact
 label: Contact.md
-order: 40
+order: 60
 ---
 
 # My Contact Info:
