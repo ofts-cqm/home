@@ -1,20 +1,28 @@
 <template>
-  <div class="bg" v-if="timeLeft > 0">
-    <div class="window">
-      <div class="title">
-        <h3>Macrohard Virtual Studio</h3>
-        <p v-if="timeLeft > 1500">Connecting to Remote Host...</p>
-        <p v-else>Opening Codespace...</p>
+  <div class="editor-surface">
+    <div class="bg" v-if="timeLeft > 0">
+      <div class="window">
+        <div class="title">
+          <h3>Macrohard Virtual Studio</h3>
+          <p v-if="timeLeft > 1500">Connecting to Remote Host...</p>
+          <p v-else>Opening Codespace...</p>
+        </div>
+        <div
+          class="progress_bar"
+          :style="{ width: `${(3000 - timeLeft) / 30}%` }"
+        ></div>
       </div>
-      <div
-        class="progress_bar"
-        :style="{ width: `${(3000 - timeLeft) / 30}%` }"
-      ></div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.editor-surface {
+  width: 100%;
+  height: 100%;
+  background-color: #171717;
+}
+
 .bg {
   position: absolute;
   background-color: #ffffff60;
@@ -64,22 +72,22 @@ import { useUIStore } from "./../stores/control";
 
 const timeLeft = ref(3000); // countdown start (seconds)
 const control = useUIStore();
-let intervalId: number;
-let resizeTimer: number;
+let intervalId: number | undefined;
+let resizeTimer: number | undefined;
 
 control.showExplorer = false;
 
 onMounted(() => {
-  intervalId = setInterval(() => {
+  intervalId = window.setInterval(() => {
     if (timeLeft.value > 0) {
       timeLeft.value -= 10;
     } else {
-      clearInterval(intervalId);
+      window.clearInterval(intervalId);
       control.showExplorer = true;
 
       document.body.classList.add("no-transition");
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(() => {
         document.body.classList.remove("no-transition");
       }, 150);
       router.push({ path: "/home" });
@@ -88,6 +96,6 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  clearInterval(intervalId);
+  window.clearInterval(intervalId);
 });
 </script>

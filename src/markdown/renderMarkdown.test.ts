@@ -23,7 +23,9 @@ describe("renderMarkdown", () => {
     expect(contentDocuments.map((document) => document.route)).toEqual([
       "/home",
       "/projects",
+      "/work",
       "/about-me",
+      "/about-ai",
       "/contact",
     ]);
 
