@@ -1,6 +1,6 @@
 ---
 route: /about-ai
-label: AboutAI.md
+label: ThoughtsOnAI.md
 order: 50
 ---
 
