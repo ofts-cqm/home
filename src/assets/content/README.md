@@ -10,7 +10,7 @@ order: 10
 ::: column
 ![OFTS_CQM](../pictures/me.jpg)
 
-*Picture by my highschool friend Wilson*
+*Picture by my highschool friend Wilton*
 :::
 
 ::: column
