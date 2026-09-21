@@ -24,7 +24,7 @@ const route = useRoute();
   flex-direction: row;
   flex-grow: 0;
   flex-shrink: 0;
-  height: 5vh;
+  height: 2.75rem;
 }
 
 .open-file {

@@ -53,8 +53,9 @@ const control = useUIStore();
 
 <style scoped>
 .header {
-  width: 100vw;
-  height: 4vh;
+  width: 100%;
+  height: 2.5rem;
+  flex: 0 0 2.5rem;
   background-color: var(--color-background-dark);
   border-style: solid;
   border-width: 0 0 1px 0;
@@ -106,8 +107,9 @@ const control = useUIStore();
 
 .content {
   display: flex;
-  width: 100vw;
-  height: 93vh;
+  width: 100%;
+  min-height: 0;
+  flex: 1 1 auto;
   flex-direction: row;
   overflow: hidden;
 }
@@ -115,16 +117,14 @@ const control = useUIStore();
 @media (max-width: 800px) {
     .header{
         flex-direction: column-reverse;
-        height: 7vh;
+        height: 4.5rem;
+        flex-basis: 4.5rem;
     }
 
     .tools{
         width: 100%;
     }
 
-    .content {
-      height: 89vh;
-    }
 }
 
 .title{
@@ -137,8 +137,9 @@ const control = useUIStore();
 }
 
 .footer {
-  width: 100vw;
-  height: 3vh;
+  width: 100%;
+  height: 1.5rem;
+  flex: 0 0 1.5rem;
   display: flex;
   flex-direction: row;
   border-style: solid;
@@ -164,8 +165,10 @@ const control = useUIStore();
 
 .main {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  height: 100dvh;
   flex-direction: column;
+  overflow: hidden;
 }
 </style>

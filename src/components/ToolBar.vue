@@ -64,7 +64,8 @@ const control = useUIStore()
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 4vw;
+  width: 4rem;
+  flex: 0 0 4rem;
   height: 100%;
   border-style: solid;
   border-width: 0 1px 0 0;

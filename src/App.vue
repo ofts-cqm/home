@@ -67,15 +67,16 @@ onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
 .main-pane {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: auto;
   height: 100%;
+  flex: 1 1 0;
   min-width: 0;
   min-height: 0;
   overflow: hidden;
 }
 
 .main-pane.with-explorer {
-  width: 80%;
+  width: auto;
 }
 
 .terminal {
@@ -96,6 +97,7 @@ onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
   min-height: 100%;
   min-width: 0;
   width: 0;
+  flex: 0 0 auto;
   display: block;
   place-items: flex-start;
   font-size: 1rem;
@@ -106,7 +108,7 @@ onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
 }
 
 .open-explorer {
-  width: 20%;
+  width: min(20%, 19rem);
 }
 
 .close-explorer {
@@ -125,21 +127,25 @@ onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
   .main-pane.with-explorer {
     height: 70%;
     width: 100%;
+    flex: 0 0 70%;
   }
 
   .main-pane:not(.with-explorer) {
     height: 100%;
     width: 100%;
+    flex: 1 1 100%;
   }
 
   .open-explorer {
     height: 30%;
     width: 100%;
+    flex-basis: 30%;
   }
 
   .close-explorer {
     height: 0;
     width: 100%;
+    flex-basis: 0;
   }
 
   .explorer {
@@ -153,11 +159,13 @@ onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
 
   .terminal-open .explorer {
     height: 0;
+    flex-basis: 0;
   }
 
   .terminal-open .main-pane {
     height: 100%;
     width: 100%;
+    flex: 1 1 100%;
   }
 
   .terminal-open .editor {
