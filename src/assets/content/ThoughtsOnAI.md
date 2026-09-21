@@ -6,7 +6,7 @@ order: 50
 
 # What do you think about AI?
 
-AI is a great tool for programmers. With AI I can implement a feature in 10 minutes that would normally take like 10 days. It is a revolution; redefines how coding works.It becomes an industry standard, it is now a part of everyone's life. 
+AI is a great tool for programmers. With AI I can implement a feature in 10 minutes that would normally take like 10 days. It is a revolution; redefines how coding works.It becomes an industry standard, it is now a part of everyone's life. With AI, I can iterate through different projects in an unimaginable speed; I finally have time to work on my side projects. I now can finish a mod in a weekend. If you ever tell me this in 2024 I won't believe it. If you tell me this in 2025 I would tell you it is technically viable but no one actually does it, but in 2026 I am actually developing in that speed. 
 
 # Fun Fact
 
@@ -18,8 +18,8 @@ Gradually, I began to change my mind. If AI is such a great tool, why not? I hav
 
 # How do you use AI
 
-Well, of course not simply in a cli. I am customizing it, I am creating skills that fits my workflow, I am incorporating MCPs, I am using it to schedule daily tasks... There are infinate ways to use AI, and I am now eager to explore all of them. 
+I am not satisified with a default codex or something. I am customizing it. I connected it to my calendar, to my school email, to my school course websites, and to all the resources. It helps me summarizing content, pointing out action items, and guide me to find the note I want. It becomes a part of my everyday life. 
 
-AI is not "smart" by default, you need to train your Agent, you need to teach her the skills you need for your project, you need to connect her to the project, via MCPs and other stuff. Fortunately I know exactly how to do that. 
+I am also developing my own MCP servers. For example, I connected Codex to minecraft, now it can help me make Minecraft films. Currently it is still significantly slower than human because AI vision is still a difficult problem, but that opens the oppertunity. 
 
-Also, an important thing about AI is, after generating the code, be sure to read it yourself and try to understand the codebase. This is the top priority after a feature is completed, otherwise the codebase becomes unmaintainable. I never lost the "old way" - it is still the core part of my skill set, otherwise there is no difference between me and a random guy using AI to create codes that probabaly no one understand. 
+I would say we should not be limited by what AI "currently" can do. Just in 2026, we all see how AI is rapidly developed. Agentic coding was still a new thing in 2025 and few people actually embraced it. But in 2026, it already becomes the industry standard for software development. I can't imagine what AI can do in 2027. 

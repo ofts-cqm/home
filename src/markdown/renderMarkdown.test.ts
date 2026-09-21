@@ -70,6 +70,7 @@ Body
     expect(html).toContain('data-flex-left="2" data-flex-right="3"');
     expect(html).toContain('class="md-grid" data-columns="2"');
     expect(html).toContain('class="md-flip-card"');
+    expect(html).toContain('class="md-flip-card-back-content"');
     expect(html).toContain('class="md-language-chip"');
     expect(html).toMatch(/src="[^\"]+me[^\"]*\.jpg"/);
     expect(html).toContain('<details class="md-accordion" open>');

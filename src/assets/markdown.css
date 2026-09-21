@@ -185,7 +185,7 @@
 
 .md-flip-card-front h3 {
   align-content: center;
-  font-size: clamp(1.25rem, 1.7cqw, 2.6rem);
+  font-size: clamp(1rem, 1.7cqw, 2.6rem);
   height: 15%;
   margin: 0;
 }
@@ -218,16 +218,19 @@
 }
 
 .md-flip-card-back {
-  align-items: center;
   background: var(--color-background-dark);
   border: 5px solid #000;
-  display: flex;
-  flex-direction: column;
   font-size: clamp(0.8rem, 1cqw, 1.1rem);
-  justify-content: center;
   overflow: auto;
   padding: 1rem;
   transform: rotateY(180deg);
+}
+
+.md-flip-card-back-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
 }
 
 .md-flip-card-back p {
