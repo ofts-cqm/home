@@ -1,16 +1,28 @@
 <template>
   <div class="editor-surface">
-    <div class="bg" v-if="timeLeft > 0">
+    <div
+      class="bg"
+      :class="{ 'is-sliding': phase === 'sliding' }"
+      @animationend="handleSlideEnd"
+    >
       <div class="window">
         <div class="title">
           <h3>Macrohard Virtual Studio</h3>
-          <p v-if="timeLeft > 1500">Connecting to Remote Host...</p>
-          <p v-else>Opening Codespace...</p>
+          <p aria-live="polite">{{ statusText }}</p>
         </div>
         <div
-          class="progress_bar"
-          :style="{ width: `${(3000 - timeLeft) / 30}%` }"
-        ></div>
+          class="progress-track"
+          role="progressbar"
+          aria-label="Opening codespace"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          :aria-valuenow="Math.round(progress)"
+        >
+          <div
+            class="progress-bar"
+            :style="{ width: `${progress}%` }"
+          ></div>
+        </div>
       </div>
     </div>
   </div>
@@ -21,31 +33,40 @@
   width: 100%;
   height: 100%;
   background-color: #171717;
+  overflow: hidden;
 }
 
 .bg {
-  position: absolute;
+  position: fixed;
+  z-index: 9999;
   background-color: #ffffff60;
-  min-width: 100vw;
-  min-height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform-origin: center;
+  will-change: transform;
 }
 
-.progress_bar {
-  height: 5%;
+.bg.is-sliding {
+  animation: splash-slide-left 900ms cubic-bezier(0.58, 0.01, 0.72, 1) both;
+}
+
+.progress-track {
+  width: 100%;
+  height: 0.65rem;
+  overflow: hidden;
+  background-color: #292929;
+}
+
+.progress-bar {
+  height: 100%;
   background-color: #3376ce;
 }
 
 .window {
-  width: 25vw;
-  min-width: 350px;
-  height: 25vh;
+  width: min(28rem, calc(100vw - 2rem));
+  height: clamp(11rem, 25vh, 15rem);
   background-color: var(--color-background-dark);
   border-width: 2px;
   border-style: solid;
@@ -59,9 +80,44 @@
 }
 
 .title {
-  padding-left: 2rem;
+  padding: 1rem 2rem 0;
   gap: 0.5rem;
-  padding-top: 1rem;
+}
+
+@keyframes splash-slide-left {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  14% {
+    transform: translateX(2.5vw) rotate(0.35deg);
+  }
+
+  31% {
+    transform: translateX(-1.5vw) rotate(-0.6deg);
+  }
+
+  48% {
+    transform: translateX(-9vw) rotate(0.55deg);
+  }
+
+  65% {
+    transform: translateX(-31vw) rotate(-0.4deg);
+  }
+
+  82% {
+    transform: translateX(-72vw) rotate(0.2deg);
+  }
+
+  100% {
+    transform: translateX(-110vw) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg.is-sliding {
+    animation-duration: 1ms;
+  }
 }
 </style>
 
@@ -70,32 +126,155 @@ import { ref, onMounted, onUnmounted } from "vue";
 import router from "@/router";
 import { useUIStore } from "./../stores/control";
 
-const timeLeft = ref(3000); // countdown start (seconds)
+interface BurstStage {
+  kind: "burst";
+  target: number;
+  step: [number, number];
+  delay: [number, number];
+  status: string;
+}
+
+interface PauseStage {
+  kind: "pause";
+  duration: [number, number];
+  status: string;
+}
+
+type LoadingStage = BurstStage | PauseStage;
+
+const progress = ref(0);
+const phase = ref<"loading" | "sliding">("loading");
+const statusText = ref("Connecting to Remote Host...");
 const control = useUIStore();
-let intervalId: number | undefined;
-let resizeTimer: number | undefined;
+const scheduledTimers = new Set<number>();
+let handoffStarted = false;
+
+function randomInteger(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const stages: LoadingStage[] = [
+  {
+    kind: "burst",
+    target: randomInteger(30, 40),
+    step: [3, 8],
+    delay: [55, 135],
+    status: "Connecting to Remote Host...",
+  },
+  {
+    kind: "pause",
+    duration: [750, 1150],
+    status: "Waiting for remote host...",
+  },
+  {
+    kind: "burst",
+    target: randomInteger(68, 79),
+    step: [3, 7],
+    delay: [55, 130],
+    status: "Downloading workspace...",
+  },
+  {
+    kind: "pause",
+    duration: [250, 550],
+    status: "Checking extensions...",
+  },
+  {
+    kind: "burst",
+    target: randomInteger(90, 95),
+    step: [2, 4],
+    delay: [90, 160],
+    status: "Starting workspace services...",
+  },
+  {
+    kind: "pause",
+    duration: [600, 950],
+    status: "Almost there...",
+  },
+  {
+    kind: "burst",
+    target: 100,
+    step: [1, 3],
+    delay: [100, 180],
+    status: "Opening Codespace...",
+  },
+];
 
 control.showExplorer = false;
 
-onMounted(() => {
-  intervalId = window.setInterval(() => {
-    if (timeLeft.value > 0) {
-      timeLeft.value -= 10;
-    } else {
-      window.clearInterval(intervalId);
-      control.showExplorer = true;
+function schedule(callback: () => void, delay: number) {
+  const timerId = window.setTimeout(() => {
+    scheduledTimers.delete(timerId);
+    callback();
+  }, delay);
 
-      document.body.classList.add("no-transition");
-      window.clearTimeout(resizeTimer);
-      resizeTimer = window.setTimeout(() => {
-        document.body.classList.remove("no-transition");
-      }, 150);
-      router.push({ path: "/home" });
-    }
-  }, 10);
-});
+  scheduledTimers.add(timerId);
+}
+
+function finishLoading() {
+  progress.value = 100;
+  statusText.value = "Codespace ready";
+  schedule(() => {
+    phase.value = "sliding";
+  }, 200);
+}
+
+function runStage(stageIndex: number) {
+  const stage = stages[stageIndex];
+
+  if (!stage) {
+    finishLoading();
+    return;
+  }
+
+  statusText.value = stage.status;
+
+  if (stage.kind === "pause") {
+    schedule(
+      () => runStage(stageIndex + 1),
+      randomInteger(...stage.duration),
+    );
+    return;
+  }
+
+  if (progress.value >= stage.target) {
+    schedule(() => runStage(stageIndex + 1), randomInteger(70, 130));
+    return;
+  }
+
+  progress.value = Math.min(
+    stage.target,
+    progress.value + randomInteger(...stage.step),
+  );
+  schedule(() => runStage(stageIndex), randomInteger(...stage.delay));
+}
+
+function handleSlideEnd(event: AnimationEvent) {
+  if (
+    phase.value !== "sliding" ||
+    event.target !== event.currentTarget ||
+    handoffStarted
+  ) {
+    return;
+  }
+
+  handoffStarted = true;
+  document.body.classList.add("no-transition");
+  control.showExplorer = true;
+  control.startBootFlicker();
+  void router.push({ path: "/home" });
+}
+
+onMounted(() => runStage(0));
 
 onUnmounted(() => {
-  window.clearInterval(intervalId);
+  for (const timerId of scheduledTimers) {
+    window.clearTimeout(timerId);
+  }
+
+  scheduledTimers.clear();
+
+  if (!control.showBootFlicker) {
+    document.body.classList.remove("no-transition");
+  }
 });
 </script>
