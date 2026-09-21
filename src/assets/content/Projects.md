@@ -6,7 +6,7 @@ order: 20
 
 # What Experiences Do You Have?
 
-I have a lot of experience in software development. Here is just a simple overview of what I have accomplished in last few years:
+I have a lot of experience in software development. Here is just a simple overview of what I have accomplished in last few years. This page records all recent projects I have made in high school till now, ranging from 2023 to 2026. Some of the projects here may seem very naive because they are made by the me in high school in grade 10. 
 
 ## General Projects
 
@@ -98,6 +98,8 @@ If you go to the MoreAboutMe page, you can learn that making mod is actually the
 
 A lot of these mods are game-design problems occured in the vanilla game. For example, the Agenda, or the Searchable Shop. I made these to improve gameplay experience. 
 
+I made most of these mods in 2024. That is the time where I just started using Github, so some of the mods don't have a repo, or a very messy repo. [This is my profile page](https://www.nexusmods.com/profile/OFTSCQM) if you are interested. 
+
 :::: grid columns=3
 
 ::: flip-card title="Farming/Fishing Only Challenge" image="../pictures/fish-only-challenge.png" alt="Video Game Modding" languages="C Sharp" 
@@ -145,16 +147,22 @@ I love to make pixel map arts in Minecraft. A map art is basically you fill a wh
 However, I often don't have enough time for that. This is a "bot" that automatically build a given painting. It can build a standard 128x128 map in 30 minutes. 
 
 This is a little bit slower than human building (usually 20 minutes) but this is fully automated! It means I can study, coding, cooking, or doing other stuff while I have this bot automatically build stuff for me while I am AFK. 
+
+[Repo Here](https://github.com/ofts-cqm/Artist)
 :::
 
 ::: accordion title="Hohxil Auto Login"
 A "playwright" tool I made for a SMP server I play, the ckocc server, or "HohXil". It contains fully automated login, world selection in hub, daily checkin, and reward claiming.
 
 Of course it also contains other stuff like an automated advertisement of my shop when new players join...
+
+[Repo Here](https://github.com/ofts-cqm/Hohxil-Auto-Login)
 :::
 
 ::: accordion title="Replay MCP"
-This one is technically more than a "Mod". Replay is a minecraft mod that can conveniently record and edit Minecraft video. It is commonly used by many YouTubers or servers to make Minecraft related films. However, I noticed that it currently lacks an AI connection... Which is exactly what I am building! This is a MCP server that connects Replay to Codex, so codex can conduct the player to perform various tasks and make Minecraft videos, while the user is just AFK! I will talk more about it in the AI Integration section (at the bottom of this page)
+This one is technically more than a "Mod". Replay is a minecraft mod that can conveniently record and edit Minecraft video. It is commonly used by many YouTubers or servers to make Minecraft related films. However, I noticed that it currently lacks an AI connection... Which is exactly what I am building! This is a MCP server that connects Replay to Codex, so codex can conduct the player to perform various tasks and make Minecraft videos, while the user is just AFK! 
+
+[Repo Here](https://github.com/ofts-cqm/Replay-MCP)
 :::
 
 ## This Website
