@@ -125,6 +125,15 @@ const control = useUIStore();
         width: 100%;
     }
 
+    .title {
+        width: 100%;
+        min-width: 0;
+        padding-left: 0;
+        padding-right: 1.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
 }
 
 .title{

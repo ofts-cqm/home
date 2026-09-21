@@ -102,6 +102,7 @@ img {
     .toolbar{
         width: 50px;
         min-width: 50px;
+        flex-basis: 50px;
     }
 }
 </style>
