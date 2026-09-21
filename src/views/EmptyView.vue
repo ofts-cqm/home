@@ -260,6 +260,7 @@ function handleSlideEnd(event: AnimationEvent) {
   handoffStarted = true;
   document.body.classList.add("no-transition");
   control.showExplorer = true;
+  control.showTerminal = !window.matchMedia("(max-width: 800px)").matches;
   control.startBootFlicker();
   void router.push({ path: "/home" });
 }

@@ -34,6 +34,49 @@ describe("portfolio shell", () => {
     expect(result.stdout).toContain("route:");
   });
 
+  it("opens an existing Markdown file", async () => {
+    const openedFiles: string[] = [];
+    const shell = createPortfolioShellWithFiles(
+      {
+        "/assets/content/README.md": "# Welcome\n",
+      },
+      {
+        onOpenMarkdown(path) {
+          openedFiles.push(path);
+        },
+      },
+    );
+
+    const result = await shell.execute("open README.md");
+
+    expect(result.stderr).toBe("");
+    expect(openedFiles).toEqual(["/assets/content/README.md"]);
+  });
+
+  it("rejects non-Markdown, missing, and ambiguous open targets", async () => {
+    const shell = createPortfolioShell();
+
+    const nonMarkdown = await shell.execute("open ../pictures/me.jpg");
+    const missing = await shell.execute("open Missing.md");
+    const tooMany = await shell.execute("open README.md Other.md");
+
+    expect(nonMarkdown.stderr).toContain("not a Markdown file");
+    expect(missing.stderr).toContain("no such file");
+    expect(tooMany.stderr).toBe("Usage: open <file.md>\n");
+  });
+
+  it("shows the commands that are available in the portfolio shell", async () => {
+    const shell = createPortfolioShell();
+
+    const result = await shell.execute("help");
+
+    expect(result.stderr).toBe("");
+    expect(result.stdout).toContain("cat");
+    expect(result.stdout).toContain("open");
+    expect(result.stdout).toContain("Use open <file.md>");
+    expect(result.stdout).not.toContain("logout");
+  });
+
   it("keeps navigation inside /assets", async () => {
     const shell = createPortfolioShell();
 

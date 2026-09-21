@@ -59,3 +59,12 @@ export const contentDocuments = buildRegistry();
 export function getContentDocument(id: string): ContentDocument | undefined {
   return contentDocuments.find((document) => document.id === id);
 }
+
+export function getContentDocumentByAssetPath(
+  assetPath: string,
+): ContentDocument | undefined {
+  return contentDocuments.find(
+    (document) =>
+      document.sourcePath.replace(/^\.\.\/assets/, "/assets") === assetPath,
+  );
+}
