@@ -19,6 +19,11 @@ function resizeListener() {
   }, 150);
 }
 
+function finishBootFlicker() {
+  control.finishBootFlicker();
+  document.body.classList.remove("no-transition");
+}
+
 onMounted(() => window.addEventListener("resize", resizeListener));
 
 onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
@@ -45,14 +50,88 @@ onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
       </div>
     </div>
   </Frame>
+
+  <div
+    v-if="control.showBootFlicker"
+    class="boot-flicker"
+    aria-hidden="true"
+    @animationend="finishBootFlicker"
+  ></div>
 </template>
 
 <style scoped>
+.boot-flicker {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  background: #171717;
+  pointer-events: all;
+  animation: boot-flicker-reveal 820ms steps(1, end) both;
+}
+
+@keyframes boot-flicker-reveal {
+  0%,
+  12% {
+    opacity: 1;
+    background: #171717;
+  }
+
+  13%,
+  19% {
+    opacity: 0.08;
+  }
+
+  20%,
+  31% {
+    opacity: 0.92;
+    background: #e8eef6;
+  }
+
+  32%,
+  39% {
+    opacity: 0;
+  }
+
+  40%,
+  48% {
+    opacity: 0.68;
+    background: #171717;
+  }
+
+  49%,
+  58% {
+    opacity: 0;
+  }
+
+  59%,
+  65% {
+    opacity: 0.42;
+    background: #8ba6c9;
+  }
+
+  66%,
+  76% {
+    opacity: 0;
+  }
+
+  77%,
+  82% {
+    opacity: 0.18;
+    background: #ffffff;
+  }
+
+  83%,
+  100% {
+    opacity: 0;
+  }
+}
+
 .explor-edit {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
+  min-width: 0;
 }
 
 .editor {
@@ -67,15 +146,16 @@ onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
 .main-pane {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: auto;
   height: 100%;
+  flex: 1 1 0;
   min-width: 0;
   min-height: 0;
   overflow: hidden;
 }
 
 .main-pane.with-explorer {
-  width: 80%;
+  width: auto;
 }
 
 .terminal {
@@ -96,6 +176,7 @@ onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
   min-height: 100%;
   min-width: 0;
   width: 0;
+  flex: 0 0 auto;
   display: block;
   place-items: flex-start;
   font-size: 1rem;
@@ -106,7 +187,7 @@ onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
 }
 
 .open-explorer {
-  width: 20%;
+  width: min(20%, 19rem);
 }
 
 .close-explorer {
@@ -125,21 +206,25 @@ onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
   .main-pane.with-explorer {
     height: 70%;
     width: 100%;
+    flex: 0 0 70%;
   }
 
   .main-pane:not(.with-explorer) {
     height: 100%;
     width: 100%;
+    flex: 1 1 100%;
   }
 
   .open-explorer {
     height: 30%;
     width: 100%;
+    flex-basis: 30%;
   }
 
   .close-explorer {
     height: 0;
     width: 100%;
+    flex-basis: 0;
   }
 
   .explorer {
@@ -153,11 +238,13 @@ onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
 
   .terminal-open .explorer {
     height: 0;
+    flex-basis: 0;
   }
 
   .terminal-open .main-pane {
     height: 100%;
     width: 100%;
+    flex: 1 1 100%;
   }
 
   .terminal-open .editor {
@@ -166,6 +253,12 @@ onBeforeUnmount(() => window.removeEventListener("resize", resizeListener));
 
   .terminal-open .terminal {
     height: 30%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boot-flicker {
+    animation-duration: 1ms;
   }
 }
 </style>

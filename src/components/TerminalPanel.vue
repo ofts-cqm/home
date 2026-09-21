@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue";
+import { useRouter } from "vue-router";
+import { getContentDocumentByAssetPath } from "../content/registry";
 import type { PortfolioShell } from "../terminal/portfolioShell";
 
 interface TerminalEntry {
@@ -14,6 +16,7 @@ interface TerminalEntry {
 const props = defineProps<{
   open: boolean;
 }>();
+const router = useRouter();
 
 const FASTFETCH_GREETING = String.raw`      /\          guest@archlinux
      /  \         os      Arch Linux x86_64
@@ -153,7 +156,17 @@ function getShell(): Promise<PortfolioShell> {
 
   shellPromise ??= import("../terminal/portfolioShell")
     .then((module) => {
-      return module.createPortfolioShell();
+      return module.createPortfolioShell({
+        async onOpenMarkdown(path) {
+          const document = getContentDocumentByAssetPath(path);
+
+          if (!document) {
+            throw new Error(`${path}: not a published Markdown document`);
+          }
+
+          await router.push(document.route);
+        },
+      });
     })
     .then((portfolioShell) => {
       shell = portfolioShell;

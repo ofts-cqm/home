@@ -24,7 +24,7 @@ const route = useRoute();
   flex-direction: row;
   flex-grow: 0;
   flex-shrink: 0;
-  height: 5vh;
+  height: 2.75rem;
 }
 
 .open-file {
@@ -48,7 +48,9 @@ const route = useRoute();
 }
 
 .file-view {
-  overflow: scroll;
+  width: 100%;
+  min-width: 0;
+  overflow: auto;
   flex-grow: 114514;
   padding-left: 5%;
   padding-right: 5%;

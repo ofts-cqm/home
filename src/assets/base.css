@@ -68,3 +68,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@media (min-width: 2560px) {
+  html {
+    font-size: clamp(16px, calc(14px + 1vw), 32px);
+  }
+}

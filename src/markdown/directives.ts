@@ -367,7 +367,7 @@ function renderOpeningDirective(
     })
     .join("");
 
-  return `<article class="md-flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Flip ${title} card"><div class="md-flip-card-inner"><div class="md-flip-card-front"><h3>${title}</h3><img src="${image}" alt="${alt}" loading="lazy" decoding="async"><div class="md-language-list">${languages}</div></div><div class="md-flip-card-back">\n`;
+  return `<article class="md-flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Flip ${title} card"><div class="md-flip-card-inner"><div class="md-flip-card-front"><h3>${title}</h3><img src="${image}" alt="${alt}" loading="lazy" decoding="async"><div class="md-language-list">${languages}</div></div><div class="md-flip-card-back"><div class="md-flip-card-back-content">\n`;
 }
 
 function renderClosingDirective(token: Token): string {
@@ -375,6 +375,7 @@ function renderClosingDirective(token: Token): string {
   if (name === "columns" || name === "grid") return "</section>\n";
   if (name === "column" || name === "item") return "</div>\n";
   if (name === "accordion") return "</div></details>\n";
+  if (name === "flip-card") return "</div></div></div></article>\n";
   return "</div></div></article>\n";
 }
 

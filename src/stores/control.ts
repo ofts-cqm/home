@@ -5,6 +5,7 @@ export const useUIStore = defineStore('control', {
   state: () => ({
     showExplorer: true,
     showTerminal: false,
+    showBootFlicker: false,
   }),
   actions: {
     toggleExplorer() {
@@ -30,6 +31,12 @@ export const useUIStore = defineStore('control', {
       ) {
         this.showExplorer = true
       }
+    },
+    startBootFlicker() {
+      this.showBootFlicker = true
+    },
+    finishBootFlicker() {
+      this.showBootFlicker = false
     },
   },
 })

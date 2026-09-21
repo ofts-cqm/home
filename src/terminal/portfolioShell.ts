@@ -1,6 +1,7 @@
 import {
   Bash,
   defineCommand,
+  getCommandNames,
   InMemoryFs,
   type BufferEncoding,
   type CpOptions,
@@ -163,6 +164,88 @@ const restrictedCommands = [
   "sudo",
 ];
 
+const shellBuiltins = [
+  ".",
+  ":",
+  "[",
+  "alias",
+  "bg",
+  "break",
+  "builtin",
+  "caller",
+  "cd",
+  "command",
+  "compgen",
+  "complete",
+  "continue",
+  "declare",
+  "dirs",
+  "disown",
+  "echo",
+  "enable",
+  "eval",
+  "exec",
+  "exit",
+  "export",
+  "false",
+  "fc",
+  "fg",
+  "getopts",
+  "hash",
+  "help",
+  "history",
+  "jobs",
+  "kill",
+  "let",
+  "local",
+  "mapfile",
+  "popd",
+  "printf",
+  "pushd",
+  "pwd",
+  "read",
+  "readarray",
+  "readonly",
+  "return",
+  "set",
+  "shift",
+  "shopt",
+  "source",
+  "suspend",
+  "test",
+  "times",
+  "trap",
+  "true",
+  "type",
+  "typeset",
+  "ulimit",
+  "umask",
+  "unalias",
+  "unset",
+  "wait",
+];
+
+const availableCommands = Array.from(
+  new Set([
+    ...getCommandNames(),
+    ...shellBuiltins,
+    ...restrictedCommands,
+    "open",
+  ]),
+).sort((left, right) => left.localeCompare(right));
+
+const helpOutput = [
+  "Portfolio shell commands (filesystem is read-only):",
+  availableCommands.join("  "),
+  "",
+  "Use open <file.md> to display a Markdown file in the editor.",
+  "",
+].join("\n");
+
+export interface PortfolioShellOptions {
+  onOpenMarkdown?: (path: string) => void | Promise<void>;
+}
+
 export interface TerminalCommandResult {
   directory: string;
   stdout: string;
@@ -175,9 +258,60 @@ export interface PortfolioShell {
 
 export function createPortfolioShellWithFiles(
   files: InitialFiles,
+  options: PortfolioShellOptions = {},
 ): PortfolioShell {
   const fileSystem = new ReadOnlyFileSystem(new InMemoryFs(files));
   let directory = DEFAULT_TERMINAL_DIRECTORY;
+
+  const openCommand = defineCommand("open", async (args, context) => {
+    if (args.length !== 1) {
+      return {
+        stdout: "",
+        stderr: "Usage: open <file.md>\n",
+        exitCode: 2,
+      };
+    }
+
+    const requestedPath = args[0]!;
+    const resolvedPath = context.fs.resolvePath(context.cwd, requestedPath);
+
+    if (!resolvedPath.toLowerCase().endsWith(".md")) {
+      return {
+        stdout: "",
+        stderr: `open: ${requestedPath}: not a Markdown file\n`,
+        exitCode: 1,
+      };
+    }
+
+    if (!(await context.fs.exists(resolvedPath))) {
+      return {
+        stdout: "",
+        stderr: `open: ${requestedPath}: no such file\n`,
+        exitCode: 1,
+      };
+    }
+
+    const file = await context.fs.stat(resolvedPath);
+    if (!file.isFile) {
+      return {
+        stdout: "",
+        stderr: `open: ${requestedPath}: not a file\n`,
+        exitCode: 1,
+      };
+    }
+
+    try {
+      await options.onOpenMarkdown?.(resolvedPath);
+    } catch (error) {
+      return {
+        stdout: "",
+        stderr: `open: ${error instanceof Error ? error.message : "unable to open file"}\n`,
+        exitCode: 1,
+      };
+    }
+
+    return { stdout: "", stderr: "", exitCode: 0 };
+  });
 
   const shell = new Bash({
     fs: fileSystem,
@@ -188,11 +322,19 @@ export function createPortfolioShellWithFiles(
       SHELL: "/bin/bash",
       USER: "guest",
     },
-    customCommands: [...restrictedCommands.map(readonlyCommand)],
+    customCommands: [...restrictedCommands.map(readonlyCommand), openCommand],
   });
 
   return {
     async execute(command: string): Promise<TerminalCommandResult> {
+      if (command.trim() === "help") {
+        return {
+          directory,
+          stdout: helpOutput,
+          stderr: "",
+        };
+      }
+
       try {
         const result = await shell.exec(command, { cwd: directory });
         const nextDirectory = result.env.PWD;
@@ -217,6 +359,8 @@ export function createPortfolioShellWithFiles(
   };
 }
 
-export async function createPortfolioShell(): Promise<PortfolioShell> {
-  return createPortfolioShellWithFiles(await createAssetFiles());
+export async function createPortfolioShell(
+  options: PortfolioShellOptions = {},
+): Promise<PortfolioShell> {
+  return createPortfolioShellWithFiles(await createAssetFiles(), options);
 }
