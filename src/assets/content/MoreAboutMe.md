@@ -83,3 +83,14 @@ It is very fun, I recommend everyone to join a band. I've been playing music sin
 ![University of Waterloo Concert Band Club](../pictures/band.jpg)
 :::
 ::::
+
+:::: columns flex="1 1"
+::: column
+![University of Waterloo Warriors Band](../pictures/warriors.jpg)
+:::
+::: column
+Update: Its two bands now!
+
+I joined UW Warriors band now, playing Sousaphone. 
+:::
+::::
