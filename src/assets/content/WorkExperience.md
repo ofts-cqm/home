@@ -14,9 +14,8 @@ order: 20
 ::: column
 My first and only work experience is [Ascendance Foundry](https://www.ascendancefoundry.com).
 
-Ascendance Foundry is a consulting firm that brings automation to various industries. We believe that, with the help of AI, any junior programmer is capable of building complex systems. Therefore, Ascendance Foundry focuses on training and developing junior software engineers as "Forward Deployed Engineers" (like me), sending them to various customers to develop automated workflows and bring AI into their systems.
+Ascendance Foundry is a consulting firm that brings automation to various industries. Ascendance Foundry sends out "Forward Deployed Engineers" to various industries to help them integrate AI into their existing workflow to boost productivity. Now as agentic coding is wide spreading, it significantly reduces the cost of making customized softwares affordable to smalal-sized companies. However, this also requires developer's dicipline to create maintainble and scalable softwares. 
 
-With the proper usage of AI, junior software engineers can show unimaginable productivity, and are capable of building maintainable and scalable customized softwares. In the past, a customized program required a large time spending a lot of time and resources to build, while AI significantly reduces the cost, making customized software affordable to all small-sized companies.
 :::
 ::::
 
