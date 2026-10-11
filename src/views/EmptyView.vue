@@ -10,6 +10,9 @@
           <h3>Macrohard Virtual Studio</h3>
           <p aria-live="polite">{{ statusText }}</p>
         </div>
+        <button class="skip-loading" type="button" @click="skipLoading">
+          Skip loading <kbd>Esc</kbd>
+        </button>
         <div
           class="progress-track"
           role="progressbar"
@@ -77,6 +80,34 @@
   justify-content: space-between;
   font-size: 1.3rem;
   color: white;
+}
+
+.skip-loading {
+  align-self: flex-end;
+  margin: 0 1rem 1rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid #707070;
+  background: #292929;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+}
+
+.skip-loading:hover,
+.skip-loading:focus-visible {
+  border-color: #78a9e8;
+  outline: 2px solid #78a9e8;
+  outline-offset: 2px;
+}
+
+.skip-loading kbd {
+  margin-left: 0.25rem;
+  padding: 0.05rem 0.25rem;
+  border: 1px solid #707070;
+  border-radius: 2px;
+  font: inherit;
+  font-size: 0.75rem;
 }
 
 .title {
@@ -257,6 +288,14 @@ function handleSlideEnd(event: AnimationEvent) {
     return;
   }
 
+  proceedToHome();
+}
+
+function proceedToHome() {
+  if (handoffStarted) {
+    return;
+  }
+
   handoffStarted = true;
   document.body.classList.add("no-transition");
   control.showExplorer = true;
@@ -265,9 +304,24 @@ function handleSlideEnd(event: AnimationEvent) {
   void router.push({ path: "/home" });
 }
 
-onMounted(() => runStage(0));
+function skipLoading() {
+  proceedToHome();
+}
+
+function handleKeydown(event: KeyboardEvent) {
+  if (event.key === "Escape") {
+    skipLoading();
+  }
+}
+
+onMounted(() => {
+  window.addEventListener("keydown", handleKeydown);
+  runStage(0);
+});
 
 onUnmounted(() => {
+  window.removeEventListener("keydown", handleKeydown);
+
   for (const timerId of scheduledTimers) {
     window.clearTimeout(timerId);
   }

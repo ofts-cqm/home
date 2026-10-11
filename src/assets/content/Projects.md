@@ -6,7 +6,7 @@ order: 20
 
 # What Experiences Do You Have?
 
-I have a lot of experience in software development. Here is just a simple overview of what I have accomplished in last few years. This page records all recent projects I have made in high school till now, ranging from 2023 to 2026. Some of the projects here may seem very naive because they are made by the me in high school in grade 10. 
+I have a lot of experience in software development. Here is just a simple overview of what I have accomplished in last few years. This page records all recent projects I have made in high school till now, ranging from 2023 to 2026. Some of the projects here are just learning projects made by the me in high school in grade 10. 
 
 ## General Projects
 
@@ -14,7 +14,7 @@ I have a lot of experience in software development. Here is just a simple overvi
 ::: flip-card title="Minecraft Skin Animator" image="../pictures/mcgif.png" alt="Minecraft Skin Animator" languages="React, JavaScript, Java, Kotlin, Ktor, JavaFx, MySql"
 I have a website for a Minecraft skin animation generator, hosted at [mcgif.cn](https://mcgif.cn) built using React+Vite as front-end, Ktor router + JavaFX rendering as backend, and a MySQL-based cache system.
 
-You can enter your Minecraft ID and select various poses, then my website will generate a gif/png using your Minecraft skin for the selected pose. For further customization, you can also adjust backgrounds, ambiant lights, and speed. Right now, I have 200+ users, and I am glad to see that my projects have helped.
+You can enter your Minecraft ID and select various poses, then my website will generate a gif/png using your Minecraft skin for the selected pose. For further customization, you can also adjust backgrounds, ambient lights, and speed. Right now, I have 200+ users, and I am glad to see that my projects have helped.
 :::
 
 ::: flip-card title="Linear Algebra Calculator" image="../pictures/matcalc.png" alt="Linear Algebra Calculator" languages="Qt, cpp, QML, Json"
@@ -38,7 +38,7 @@ A C compiler (Compiler + Assembler) that supports about 40% of all C keywords an
 
 Can output tokenized grammar trees, intermediate languages, or assembly code. Can be DIYed to fit various assembly languages. Due to the complexity of linking, this compiler only generates assembly code; it cannot link against system libraries.
 
-[Repo here](github.com/ofts-cqm/CLCCompiler)
+[Repo here](https://github.com/ofts-cqm/CLCCompiler)
 :::
 ::::
 
@@ -55,7 +55,7 @@ Utilized customized shaders to render waters and transparent textures. Explored 
 
 Note that the items in the hotbar are sprites baked in runtime, maximizing rendering efficiency while keeping the 3D model of blocks.
 
-You can find the repo [here](https://github.com/ofts-cqm/UnityCraft). Note that this repo does not include textures because it uses some of Minecraft's textures. 
+You can find the repo [here](https://github.com/ofts-cqm/UnityCraft). 
 :::
 
 ::: flip-card title="Minecraft From Scratch" image="../pictures/minecraft-old.png" alt="java rendered Minecraft from scratch" languages="Java"
@@ -68,7 +68,7 @@ This is a very old project, I kinda lost the repo.
 ## AI Integration
 
 ::: accordion title="LEARN Integration" open=false
-I connected LEARN, which is UWaterloo's course platform, to codex. Now codex helps me to manage my calendar. It automatically marks all deadlines, it sends me notifications about important announcements. It manages a knowledge base, and whenever I have questions regarding an assignment's requirement, I can just ask codex directly instead of finding through scattered course webpages. Honestly, these professors really needs to better organize their course pages. 
+I connected LEARN, which is UWaterloo's course platform, to codex. Now codex helps me to manage my calendar. It automatically marks all deadlines, it sends me notifications about important announcements. It manages a knowledge base, and whenever I have questions regarding an assignment's requirement, I can just ask codex directly instead of finding through scattered course webpages. 
 :::
 
 ::: accordion title="Replay MCP" open=false
@@ -84,7 +84,7 @@ It currently supports:
 - Replay Mod recording and timeline edit.
 - Handoff to post-production video editors for caption, music, and clipping, etc.
 
-With Replay MCP, codex can now film Minecrafat videos! I am happy to annouce that there is one more thing AI can do. 
+With Replay MCP, codex can now film Minecraft videos! I am happy to announce that there is one more thing AI can do. 
 
 [Repo Here](https://github.com/ofts-cqm/Replay-MCP)
 
@@ -92,7 +92,7 @@ With Replay MCP, codex can now film Minecrafat videos! I am happy to annouce tha
 
 ## Video Game Modding
 
-If you go to the MoreAboutMe page, you can learn that making mod is actually the core reason I started learning coding. Here is a list of mods I have made. They might seem to be very simple now a days, but remember most mods are made in **2024**, and you can see I actually spent a lot of time trying to learn and make stuff. In 2026 AI can just make a mod in a few minutes, but I would still put them here, to demonstrate the time I spend on coding, and my learning along the way. 
+If you go to the MoreAboutMe page, you can learn that making mod is actually the core reason I started learning coding. Here is a list of mods I have made. They might seem to be very simple now a days, but remember most mods are made in **2024**, and you can see I actually spent a lot of time trying to learn and make stuff. 
 
 ### Stardew Valley Mods:
 
@@ -112,7 +112,7 @@ This is an "Amazon" mod I made. I noticed that the game lacks online shopping, c
 
 ::: flip-card title="Agenda" image="../pictures/agenda.png" alt="Video Game Modding" languages="C Sharp" 
 
-This one is definately not cheating. This is a real game design problem. 
+This one is definitely not cheating. This is a real game design problem. 
 
 You see, Stardew Valley is infamous for its time constrints. You see, the game constantly requires the player to do specific things in specific time, which requires a lot of planning. For example, some crops only grow in specific season, and some shops only open on specific day of week. 
 

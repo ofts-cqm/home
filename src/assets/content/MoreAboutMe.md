@@ -18,7 +18,7 @@ I’ve seen a lot of people choose software engineering for either a high salary
 
 :::: columns flex="1 1"
 ::: column
-I believe everyone has played Minecraft, or at least heard of it, right? That's where the whole store began. Minecraft is famous for its modding community. When I wrote this article, Minecraft had approximately 200k mods on CurseForge (the largest mod platform for Minecraft), not counting those that are not uploaded to CurseForge. When I first got in touch with these mods in elementary school, I was shocked by the infinite possibilities they bring. Gradually, a thought popped into my head: Can I make my own mod?
+I believe everyone has played Minecraft, or at least heard of it, right? That's where the whole story began. Minecraft is famous for its modding community. When I wrote this article, Minecraft had approximately 200k mods on CurseForge (the largest mod platform for Minecraft), not counting those that are not uploaded to CurseForge. When I first got in touch with these mods in elementary school, I was shocked by the infinite possibilities they bring. Gradually, a thought popped into my head: Can I make my own mod?
 
 This is a screenshot of the modpack (made around 2016 ) that sparked my idea for making my own mod.
 
@@ -36,7 +36,7 @@ The power of a childhood dream is invincible. This ambitious thought encourages 
 
 Well, I have used that name as my Minecraft ID for several years. CQM is the acronym of my Chinese name Chen Qianmu, and OFTS is a bit complicated.
 
-Back then, there was a game called Minecraft: Story Mode (the company that made it went bankrupt, so it's no longer available). It talks about the adventures of a team called the Order of the Stone. Yes, that's where OFTS come from. Order oF The Store. I forgot the exact reason why I called it OFTS instead of OOTS or something else. I picked the name almost 10 years ago. I remember it comes from the Order of The Stone, but I forgot the details.
+Back then, there was a game called Minecraft: Story Mode (the company that made it went bankrupt, so it's no longer available). It talks about the adventures of a team called the Order of the Stone. Yes, that's where OFTS come from. Order oF The Stone. I forgot the exact reason why I called it OFTS instead of OOTS or something else. I picked the name almost 10 years ago. I remember it comes from the Order of The Stone, but I forgot the details.
 
 Back then, I really liked the Order of the Stone, and I imagined that I was a member of them, exploring the world and defeating the evils. C'mon, everyone has a heroic childhood dream, right? So I added my name after the acronym OFTS, so it becomes OFTS-CQM.
 
@@ -44,9 +44,9 @@ In fact, not limited to Minecraft, most of my game accounts uses OFTS-CQM, inclu
 
 # Any interesting stories about Minecraft and coding?
 
-As we all know, Minecraft (Java Edition) uses Java! Therefore! If I want to make mods for Minecraft, I should learn Java! That was exactly what I thought! So, my first programming language is Java...Script!
+As we all know, Minecraft (Java Edition) uses Java! Therefore! If I want to make mods for Minecraft, I should learn Java! That was exactly what I thought when I started learning! So, my first programming language is Java...Script!
 
-Yes that is the real story. I searched java and the first thing poped up was javascript.
+Yes that was the real story. I searched java and the first thing poped up was javascript.
 
 I thought javascript is some kind of formal name of Java, because you know, programmers like to use abbreviations.
 
@@ -60,21 +60,13 @@ It should be something technical, related to programmers, related to coding. I c
 
 So yes, I created this Macrohard Virtual Studio v6.7.0. Renamed it because I don't wanna get sued by Microsoft.
 
-# How Do You Feel About Studying Software Engineering?
-
-## Here is a meme from reddit:
-
-::: accordion title="Click to see..." open=false
-![Software Engineering meme](../pictures/meme.png)
-:::
-
 # I heard, you are in a band?
 
 :::: columns flex="1 1"
 ::: column
 Yes! Study is kinda boring, so I joined a band. In fact, I am considering joining another band, so next time you open this website, it might be "bands" instead of "band".
 
-The band is called UWCBC (University of Waterloo Concert Band Club), and I play Euphonium in it. If you don't know what Euphonium is, it's similar to a Tuba but a lot smaller, to the size of a Frech Horn.
+The band is called UWCBC (University of Waterloo Concert Band Club), and I play Euphonium in it. If you don't know what Euphonium is, it's similar to a Tuba but a lot smaller, to the size of a French Horn.
 
 It is very fun, I recommend everyone to join a band. I've been playing music since elementary shcool, and to me, music is already an indispensible part of my life.
 :::
