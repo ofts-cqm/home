@@ -6,7 +6,7 @@ order: 60
 
 # My Contact Info:
 
-![LinkedIn](../svgs/linkedin.svg) [Qinamu Chen](https://www.linkedin.com/in/qianmu-chen/)
+![LinkedIn](../svgs/linkedin.svg) [Qianmu Chen](https://www.linkedin.com/in/qianmu-chen/)
 
 ![GitHub](../svgs/github.svg) [ofts-cqm](https://github.com/ofts-cqm)
 
