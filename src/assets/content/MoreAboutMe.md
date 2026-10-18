@@ -18,7 +18,7 @@ I’ve seen a lot of people choose software engineering for either a high salary
 
 :::: columns flex="1 1"
 ::: column
-I believe everyone has played Minecraft, or at least heard of it, right? That's where the whole story began. Minecraft is famous for its modding community. When I wrote this article, Minecraft had approximately 200k mods on CurseForge (the largest mod platform for Minecraft), not counting those that are not uploaded to CurseForge. When I first got in touch with these mods in elementary school, I was shocked by the infinite possibilities they bring. Gradually, a thought popped into my head: Can I make my own mod?
+I believe everyone has played Minecraft, or at least heard of it, right? That's where the whole story began. Minecraft is famous for its modding community. When I wrote this article, Minecraft had approximately 200k mods on CurseForge (the largest mod platform for Minecraft), not counting those that are not uploaded to CurseForge. When I first got in touch with these mods in elementary school, I was shocked by the infinite possibilities they brought. Gradually, a thought popped into my head: "Can I make my own mod?"
 
 This is a screenshot of the modpack (made around 2016 ) that sparked my idea for making my own mod.
 
