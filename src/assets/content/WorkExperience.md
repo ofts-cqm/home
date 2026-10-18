@@ -14,7 +14,11 @@ order: 20
 ::: column
 My first and only work experience is [Ascendance Foundry](https://www.ascendancefoundry.com).
 
-Ascendance Foundry is a consulting firm that brings automation to various industries. Ascendance Foundry sends "Forward Deployed Engineers" to various industries to help them integrate AI into their existing workflows and boost productivity. Now, as agentic coding becomes more widespread, it significantly reduces the cost of customized software, making it affordable for small companies. However, this also requires developers' discipline to build maintainable, scalable software. 
+Ascendance Foundry is a consulting firm that brings automation to various industries. Ascendance Foundry sends "Forward Deployed Engineers" to various industries to help them integrate AI into their existing workflows and boost productivity. 
+
+Now, as agentic coding becomes more widespread, it significantly reduces the cost of customized software, making it affordable for small companies. 
+
+However, AI is an expert at building softwares that works once, buut it requires developers' disciplines and managements to build maintainable and scalable software for future updates and scaling. You need a person who can understand the codebase, the architecture, as AI can make mistakes. 
 
 :::
 ::::
@@ -25,15 +29,15 @@ With the help of AI, plus my knowledge learned from University and my personal p
 
 ## What you personally designed or implemented? Which systems you connected?
 
-Everything. I was the only one sent to this company and I can proudly say I built their automation system. 
+The company I worked for uses QuickBooks as their accounting book. However, most of their data were still stored and calculated in Excel; they were manually gathered from scattered platforms and manually transferred to QuickBooks. 
 
-The company I worked for uses QuickBooks as their accounting book. However, most of their data were still stored and calculated in Excel; they were manually gathered from scattered platforms and manually transferred to QuickBooks. My integrations usually happens between QuickBooks, Excels, Teams, and Outlook, where QuickBooks still used as accounting book, Excel for sources, temperory storage, and some calculations, then use Teams to send out automated approval requests for each journals created, and Outlook as notifications, or information gathering. 
+My integrations were usually between QuickBooks, Excels, Teams, and Outlook, where QuickBooks still used as accounting book, Excel for sources, temperory storage, and some calculations; then Teams was used to send out automated approval requests for each journals created, and Outlook was used as notifications, or information gathering. 
 
-These connections are established and maintained by various Azure services. For example, Azure Function was used to run event triggered functions, and Azure Key Vault was used to store credentials. Some Python Scripts and Office Scripts are also used for local data and batch file processing to build this complete, automted data pipeline. 
+These connections are established and maintained by various Azure services. For example, Azure Function was used to run event triggered functions, and Azure Key Vault was used to store credentials. Some Python Scripts and Office Scripts are also used for local data and batch file processing to build this complete, automted data pipeline. Some simple Power Apps were also used; for example, Power Automate for simple integration and Power App for data visualization. 
 
 I also implemented some AI automations such as an email chat bot that tracks employee's time tracking, and analytics about the current business. Afterall FDEs' main responsibility is to bring AI into various industries. 
 
-Having an integrated platform might sounds like a better option but given that I only have four months, an integration of platforms is more feasible. Another factor is change management. The company is already familiar with the existing Excel-based workflow and actually created a lot of very useful templates. Transfering them requires new validation and brings potential error. By integrating Excel instead of replacing Excel, the company can still utilize their existing Excel templates, while having most of the data transformation and validation automated. 
+Having a whole new integrated platform might sounds like a better option but given that I only had four months, an integration of platforms was more feasible. Another factor was change management. The company was already familiar with the existing Excel-based workflow and actually created a lot of very useful templates. Transfering them requires new validation and brings potential error. Manual Excel workflows obviously should be replaced, the problem was how. By integrating Excel instead of replacing Excel completely, the company could still utilize their existing Excel templates, while having most of the data transformation and validation automated. 
 
 ## How you validated the results?
 
