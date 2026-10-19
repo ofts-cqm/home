@@ -14,7 +14,9 @@ const route = useRoute();
             </div>
             <div class="tag-space"></div>
             </div>
-        <RouterView class="file-view"/>
+        <RouterView v-slot="{ Component }">
+            <component :is="Component" :key="route.path" class="file-view" />
+        </RouterView>
     </div>
 </template>
 
