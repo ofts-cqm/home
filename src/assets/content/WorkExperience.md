@@ -12,13 +12,13 @@ order: 20
 :::
 
 ::: column
-My first and only work experience is [Ascendance Foundry](https://www.ascendancefoundry.com).
+My first coop term was at [Ascendance Foundry](https://www.ascendancefoundry.com).
 
 Ascendance Foundry is a consulting firm that brings automation to various industries. Ascendance Foundry sends "Forward Deployed Engineers" to various industries to help them integrate AI into their existing workflows and boost productivity. 
 
 Now, as agentic coding becomes more widespread, it significantly reduces the cost of customized software, making it affordable for small companies. 
 
-However, AI is an expert at building softwares that works once, buut it requires developers' disciplines and managements to build maintainable and scalable software for future updates and scaling. You need a person who can understand the codebase, the architecture, as AI can make mistakes. 
+However, AI is an expert at building softwares that works once, but it requires developers' disciplines and managements to build maintainable and scalable software for future updates and scaling. You need a person who can understand the codebase, the architecture, as AI can make mistakes. 
 
 :::
 ::::

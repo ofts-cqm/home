@@ -50,7 +50,7 @@ Yes that was the real story. I searched java and the first thing poped up was ja
 
 I thought javascript is some kind of formal name of Java, because you know, programmers like to use abbreviations.
 
-Literally, I spent four months learning javascript and still couldn't read Minecraft's source code. I told myself that it is gonna be hard, not everyone can be a programmer, it probabaly takes a year or two to be proficient enough to read Minecraft's code... UNTIL I REALIZED I WAS LEARNING THE COMPLETELY WRONG LANGUAGE!!! FUUUUUUUUUUU**
+Literally, I spent four months learning javascript and still couldn't read Minecraft's source code. I told myself that it is gonna be hard, not everyone can be a programmer, it probabaly takes a year or two to be proficient enough to read Minecraft's code... until I realized I was learning the completely wrong language...
 
 # Why "Macrohard Virtual Studio"?
 
