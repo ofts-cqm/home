@@ -92,7 +92,7 @@ With Replay MCP, codex can now film Minecraft videos! I am happy to announce tha
 
 ## Video Game Modding
 
-If you go to the MoreAboutMe page, you can learn that making mod is actually the core reason I started learning coding. Here is a list of mods I have made. They might seem to be very simple now a days, but remember most mods are made in **2024**, and you can see I actually spent a lot of time trying to learn and make stuff. 
+If you go to the MoreAboutMe page, you can find that making mod is actually the core reason I started learning coding. Here is a list of mods I have made. They might seem to be very simple now a days, but remember most mods are made in **2024**, and you can see I actually spent a lot of time trying to learn and make stuff. 
 
 ### Stardew Valley Mods:
 
@@ -118,9 +118,9 @@ You see, Stardew Valley is infamous for its time constrints. You see, the game c
 
 In other games if you missed a task you can simply "do it tomorrow," but this is not true for Stardew Valley. If you missed a task, you may need to wait for another week, or even another year! *AND THE GAME DOESN'T HAVE A CALENDAR!!!!* 
 
-Techinically the game does have a calendar but it is readonly and only display fixedd stuff. This is very frastrting since we cannot record our own tasks. 
+Technically the game does have a calendar but it is readonly and only display fixed stuff. This is very frastrating since we cannot record our own tasks. 
 
-Therefore I made this agenda mod, which allows user to mark specific events on Calendar, and there will be an obvious reminder when the time approache. No one should ever miss a single task. 
+Therefore I made this agenda mod, which allows user to mark specific events on Calendar, and there will be an obvious reminder when the time approach. No one should ever miss a single task. 
 :::
 
 ::: flip-card title="Searchable Shop" image="../pictures/searchable-shop.png" alt="Video Game Modding" languages="C Sharp" 
@@ -128,7 +128,7 @@ This is a derived shop from Joja Express. Because Joja Express is a big shop, so
 :::
 
 ::: flip-card title="Tool Assembly" image="../pictures/tool-assembly.png" alt="Video Game Modding" languages="C Sharp" 
-Starddew Valley has a problem: it has a lot of tools, with a very tight inventory space. Sometimes my inventory get filled with a lot of tools. Therefore, I made this mod. It adds a omnicient tool that can transform to all tools, and the player can simply switch which tool they want, saving a lot of inventory space. 
+Stardew Valley has a problem: it has a lot of tools, with a very tight inventory space. Sometimes my inventory get filled with a lot of tools. Therefore, I made this mod. It adds a omnicient tool that can transform to all tools, and the player can simply switch which tool they want, saving a lot of inventory space. 
 :::
 
 ::: flip-card title="Translation Replacer" image="../pictures/translation-replacer.png" alt="Video Game Modding" languages="C Sharp" 
