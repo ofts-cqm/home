@@ -1,13 +1,18 @@
 import { describe, expect, it } from "vitest";
-import { getContentDocumentByAssetPath } from "./registry";
+import { contentDocuments, getContentDocumentByAssetPath } from "./registry";
 
 describe("content registry", () => {
   it("maps terminal asset paths to published Markdown routes", () => {
-    expect(
-      getContentDocumentByAssetPath("/assets/content/README.md")?.route,
-    ).toBe("/home");
-    expect(
-      getContentDocumentByAssetPath("/assets/content/ThoughtsOnAI.md")?.route,
-    ).toBe("/about-ai");
+    expect(contentDocuments.length).toBeGreaterThan(0);
+
+    for (const document of contentDocuments) {
+      const assetPath = document.sourcePath.replace(
+        /^\.\.\/assets\//,
+        "/assets/",
+      );
+      expect(getContentDocumentByAssetPath(assetPath)).toBe(document);
+    }
+
+    expect(getContentDocumentByAssetPath("/assets/content/")).toBeUndefined();
   });
 });
