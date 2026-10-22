@@ -40,6 +40,14 @@ Can output tokenized grammar trees, intermediate languages, or assembly code. Ca
 
 [Repo here](https://github.com/ofts-cqm/CLCCompiler)
 :::
+
+::: flip-card title="CKOCC Metro Collaboration Portal" image="../pictures/ckocc.png" alt="ckocc" languages="TypeScript, Next.Js, PostgreSql, AWS, Vercel, Cloudflare"
+This is a bit special. I am playing in a Minecraft smp server (CKOCC). We have a player-built metro system maintained by "Ministry of Railways". In the beginning we manage line updates and maintenance through group chats, but as more and more people joined as, it becomes increasingly difficult to manage. Therefore, I created this website to manage line updates and maintenance. This support update requests, comments, and automatic email notifications. 
+
+Roles including guests, collaborators, and administrators where guests can send requests, collaborators can update, and administrators approve all requests and updates. This website is invitation based so sorry no accounts signin.
+
+[Repo here](https://github.com/ofts-cqm/ckocc-metro-website)
+:::
 ::::
 
 
