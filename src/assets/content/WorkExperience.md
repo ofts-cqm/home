@@ -12,34 +12,33 @@ order: 20
 :::
 
 ::: column
-My first coop term was at [Ascendance Foundry](https://www.ascendancefoundry.com).
+My first co-op term was at [Ascendance Foundry](https://www.ascendancefoundry.com).
 
-Ascendance Foundry is a consulting firm that brings automation to various industries. Ascendance Foundry sends "Forward Deployed Engineers" to various industries to help them integrate AI into their existing workflows and boost productivity. 
+Ascendance Foundry is a consulting firm that brings automation to various industries. It sends "Forward Deployed Engineers" to clients to help them integrate AI into their existing workflows and boost productivity.
 
-Now, as agentic coding becomes more widespread, it significantly reduces the cost of customized software, making it affordable for small companies. 
+As agentic coding becomes more widespread, it significantly reduces the cost of custom software, making it affordable for small companies.
 
-However, AI is an expert at building softwares that works once, but it requires developers' disciplines and managements to build maintainable and scalable software for future updates and scaling. You need a person who can understand the codebase, the architecture, as AI can make mistakes. 
+AI can produce a working first version of software, but making it maintainable and scalable requires developer discipline and oversight. Someone still needs to understand the codebase and its architecture because AI can make mistakes.
 
 :::
 ::::
 
-In Ascendance Foundry, I worked for a private equity firm to automate their accounting process. Utilizing their Microsoft stack, by connecting to different platforms, I was able to automate processes including but not limited to **payroll processing**, **expense recharging**, **financial statement generation**, and **managing deal transactions**. 
+At Ascendance Foundry, I worked with a private equity firm to automate its accounting processes. By connecting platforms in its Microsoft stack, I automated **payroll processing**, **expense recharging**, **financial statement generation**, and **deal transaction management**.
 
-With the help of AI, plus my knowledge learned from University and my personal projects, I am able to compress these processes that used to take a few days down to just one click, while significantly reducing the bookkeeper error rate. This is because humans' errors compound. Even if you can do 95% of your journals correctly, well, a month's deal contains 29 journals to post, which brings the possibility down to 0.95^29 = 22.5%. With the accounting automation, because data are all computed from well-configured tables and are automatically validated based on a rule set, that brings the error rate down to zero. 
+With the help of AI and knowledge gained at university and through personal projects, I reduced processes that used to take a few days to a single click while significantly reducing bookkeeping errors. Manual errors can accumulate: assuming each journal entry has an independent 95% chance of being correct, the chance that all 29 entries in a month's deal are correct is about 0.95^29 = 22.6%. In the automated workflow, data are computed from configured tables and validated against a set of rules.
 
-## What you personally designed or implemented? Which systems you connected?
+## What did I design or implement? Which systems did I connect?
 
-The company I worked for uses QuickBooks as their accounting book. However, most of their data were still stored and calculated in Excel; they were manually gathered from scattered platforms and manually transferred to QuickBooks. 
+The company I worked with used QuickBooks for its accounting records. However, most of its data were still stored and calculated in Excel, gathered manually from various platforms, and transferred manually to QuickBooks.
 
-My integrations were usually between QuickBooks, Excels, Teams, and Outlook, where QuickBooks still used as accounting book, Excel for sources, temperory storage, and some calculations; then Teams was used to send out automated approval requests for each journals created, and Outlook was used as notifications, or information gathering. 
+My integrations connected QuickBooks, Excel, Teams, and Outlook. QuickBooks remained the accounting system; Excel held source data, temporary data, and some calculations; Teams sent automated approval requests for each journal entry; and Outlook handled notifications and information gathering.
 
-These connections are established and maintained by various Azure services. For example, Azure Function was used to run event triggered functions, and Azure Key Vault was used to store credentials. Some Python Scripts and Office Scripts are also used for local data and batch file processing to build this complete, automted data pipeline. Some simple Power Apps were also used; for example, Power Automate for simple integration and Power App for data visualization. 
+Various Azure services established and maintained these connections. For example, Azure Functions ran event-triggered code, and Azure Key Vault stored credentials. Python and Office Scripts handled local data and batch file processing in the automated data pipeline. I also used Power Automate for simple integrations and Power Apps for data visualization.
 
-I also implemented some AI automations such as an email chat bot that tracks employee's time tracking, and analytics about the current business. Afterall FDEs' main responsibility is to bring AI into various industries. 
+I also implemented AI automations, such as an email chatbot for employee time tracking and business analytics. After all, an FDE's main responsibility is to bring AI into different industries.
 
-Having a whole new integrated platform might sounds like a better option but given that I only had four months, an integration of platforms was more feasible. Another factor was change management. The company was already familiar with the existing Excel-based workflow and actually created a lot of very useful templates. Transfering them requires new validation and brings potential error. Manual Excel workflows obviously should be replaced, the problem was how. By integrating Excel instead of replacing Excel completely, the company could still utilize their existing Excel templates, while having most of the data transformation and validation automated. 
+Building a new integrated platform might sound like a better option, but given that I had only four months, connecting the existing platforms was more feasible. Change management was another factor. The company was familiar with its Excel-based workflow and had created many useful templates. Transferring them would have required new validation and introduced potential errors. The question was how to replace manual Excel steps. By integrating Excel, the company could keep using its templates while automating most data transformation and validation.
 
-## How you validated the results?
+## How did we validate the results?
 
-We validated the result together. Accounting team gave me past journals and sources, I ran my automation based on real historical data and compare the result. Nothing was pushed to production unless validated in sandbox environment, to secure the accounting book. We used weekly meetings to study and align the process, demo the automation, gather the feedbacks, and validate against the real historical data and journals. Workflows were also examined by the power user to make sure they were conftable with the new system and were willing to adopt. 
-
+We validated the results together. The accounting team gave me past journal entries and source data; I ran the automation on that historical data and compared the results. We validated changes in a sandbox environment before moving them to production to protect the accounting records. In weekly meetings, we reviewed the process, demonstrated the automation, gathered feedback, and checked results against historical records. A power user also reviewed the workflows to make sure they were comfortable with the new system and willing to adopt it.

@@ -15,5 +15,3 @@ order: 60
 ![Gmail](../svgs/gmail.svg) [qianmuchen.sam@gmail.com](mailto:qianmuchen.sam@gmail.com)
 
 ![Gmail](../svgs/gmail.svg) [sam.chen@uwaterloo.ca](mailto:sam.chen@uwaterloo.ca)
-
-![WeChat](../svgs/wechat.svg) 13651113174

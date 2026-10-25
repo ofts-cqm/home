@@ -4,47 +4,47 @@ label: Projects.md
 order: 20
 ---
 
-# What Experiences Do You Have?
+# What Have You Built?
 
-I have a lot of experience in software development. Here is just a simple overview of what I have accomplished in last few years. This page records all recent projects I have made in high school till now, ranging from 2023 to 2026. Some of the projects here are just learning projects made by the me in high school in grade 10. 
+I have experience in software development. Here is an overview of what I have accomplished over the last few years. This page covers projects I have made from high school to the present, from 2023 to 2026. Some are learning projects I made in Grade 10.
 
 ## General Projects
 
 :::: grid columns=3
-::: flip-card title="Minecraft Skin Animator" image="../pictures/mcgif.png" alt="Minecraft Skin Animator" languages="React, JavaScript, Java, Kotlin, Ktor, JavaFx, MySql"
-I have a website for a Minecraft skin animation generator, hosted at [mcgif.cn](https://mcgif.cn) built using React+Vite as front-end, Ktor router + JavaFX rendering as backend, and a MySQL-based cache system.
+::: flip-card title="Minecraft Skin Animator" image="../pictures/mcgif.png" alt="Minecraft Skin Animator" languages="React, JavaScript, Java, Kotlin, Ktor, JavaFX, MySQL"
+I built a Minecraft skin animation generator at [mcgif.cn](https://mcgif.cn), using React and Vite for the frontend, Ktor and JavaFX rendering for the backend, and a MySQL-based cache.
 
-You can enter your Minecraft ID and select various poses, then my website will generate a gif/png using your Minecraft skin for the selected pose. For further customization, you can also adjust backgrounds, ambient lights, and speed. Right now, I have 200+ users, and I am glad to see that my projects have helped.
+You can enter your Minecraft ID and select a pose, and the site will generate a GIF or PNG using your skin. You can also adjust the background, ambient lighting, and animation speed. The site has more than 200 users, and I am glad to see that it has helped them.
 :::
 
-::: flip-card title="Linear Algebra Calculator" image="../pictures/matcalc.png" alt="Linear Algebra Calculator" languages="Qt, cpp, QML, Json"
-I have developed a linear algebra calculator in C++ using Qt. I made it so I can suffer less from Math 115 Linear Algebra for Engineers.
+::: flip-card title="Linear Algebra Calculator" image="../pictures/matcalc.png" alt="Linear Algebra Calculator" languages="Qt, C++, QML, JSON"
+I developed a linear algebra calculator in C++ using Qt. I made it to help with Math 115: Linear Algebra for Engineers.
 
 I integrated a formula lexer and evaluator, so you can enter formulas directly instead of calculating them elsewhere and entering the numbers. For example, if you want a rotation matrix, you can just enter cos(pi/2), -sin(pi/2), sin(pi/2), and cos(pi/2).
 
-It also stores calculation history using JSON, so you can quickly go back to your previous calculation after restarting the app.
+It also stores calculation history in JSON, so you can return to previous calculations after restarting the app.
 
 [Repo Here](https://github.com/ofts-cqm/matCalc)
 :::
 
-::: flip-card title="Android Todo App" image="../pictures/wattodo.png" alt="Android Todo App" languages="Java, Kotlin, Android Studio, Python, Flask, MySql, RestApi"
-I have developed an Android Todo-List application in Java and Kotlin using Android Studio.
+::: flip-card title="Android Todo App" image="../pictures/wattodo.png" alt="Android Todo App" languages="Java, Kotlin, Android Studio, Python, Flask, MySQL, REST API"
+I developed an Android to-do list app in Java and Kotlin using Android Studio.
 
-It implements a Three-Tier-Architecture, with a Python Flask backend and a MySQL database. It also uses a local caching system with JSON to ensure data availability and security.
+It has a three-tier architecture, with a Python Flask backend and a MySQL database. It also uses a local JSON cache to keep data available.
 :::
 
-::: flip-card title="C Compiler" image="../pictures/compiler.png" alt="C Compiler" languages="C Sharp"
-A C compiler (Compiler + Assembler) that supports about 40% of all C keywords and all C operators. Built using a custom lexer and token generator.
+::: flip-card title="C Compiler" image="../pictures/compiler.png" alt="C Compiler" languages="C#"
+A C compiler project that supports about 40% of C keywords and all C operators. It uses a custom lexer and token generator.
 
-Can output tokenized grammar trees, intermediate languages, or assembly code. Can be DIYed to fit various assembly languages. Due to the complexity of linking, this compiler only generates assembly code; it cannot link against system libraries.
+It can output parse trees, intermediate representations, or assembly code and can be adapted to various assembly languages. Due to the complexity of linking, it generates assembly code but cannot link against system libraries.
 
 [Repo here](https://github.com/ofts-cqm/CLCCompiler)
 :::
 
-::: flip-card title="CKOCC Metro Collaboration Portal" image="../pictures/ckocc.png" alt="ckocc" languages="TypeScript, Next.Js, PostgreSql, AWS, Vercel, Cloudflare"
-This is a bit special. I am playing in a Minecraft smp server (CKOCC). We have a player-built metro system maintained by "Ministry of Railways". In the beginning we manage line updates and maintenance through group chats, but as more and more people joined as, it becomes increasingly difficult to manage. Therefore, I created this website to manage line updates and maintenance. This support update requests, comments, and automatic email notifications. 
+::: flip-card title="CKOCC Metro Collaboration Portal" image="../pictures/ckocc.png" alt="CKOCC metro portal" languages="TypeScript, Next.js, PostgreSQL, AWS, Vercel, Cloudflare"
+This project is a bit special. I play on a Minecraft SMP server called CKOCC. We have a player-built metro system maintained by the "Ministry of Railways." At first, we managed line updates and maintenance through group chats, but that became increasingly difficult as more people joined us. I created this website to manage line updates and maintenance. It supports update requests, comments, and automatic email notifications.
 
-Roles including guests, collaborators, and administrators where guests can send requests, collaborators can update, and administrators approve all requests and updates. This website is invitation based so sorry no accounts signin.
+The site has guest, collaborator, and administrator roles. Guests can submit requests, collaborators can make updates, and administrators approve requests and updates. The site is invitation-based, so account registration is limited. It is invitation based so sorry you cannot register an account but you can still comment as a guest. 
 
 [Repo here](https://github.com/ofts-cqm/ckocc-metro-website)
 :::
@@ -53,46 +53,46 @@ Roles including guests, collaborators, and administrators where guests can send 
 
 ## Minecraft-Derived Work
 
-Yes I am a Minecraft fan, so I actually tried to re-create Minecraft in very different ways.
+Yes, I am a Minecraft fan, so I have tried to recreate it in different ways.
 
 :::: grid columns=3
-::: flip-card title="Unity Based Minecraft" image="../pictures/minecraft_unity.png" alt="Unity Based Minecraft terrain" languages="C Sharp, Unity"
-A Minecraft built using unity, supporting most features including perlin-noise-based terrain generation, async chunk loading, transparent block rendering, slabs (and other half block) rendering, and inventory UI.
+::: flip-card title="Unity-Based Minecraft" image="../pictures/minecraft_unity.png" alt="Unity-based Minecraft terrain" languages="C#, Unity"
+A Minecraft-inspired game built with Unity, featuring Perlin noise terrain generation, asynchronous chunk loading, transparent blocks, slabs and other half blocks, and an inventory UI.
 
-Utilized customized shaders to render waters and transparent textures. Explored shader designing and modern game architectures like ECS.
+I used custom shaders to render water and transparent textures and explored shader design and modern game architectures such as ECS.
 
-Note that the items in the hotbar are sprites baked in runtime, maximizing rendering efficiency while keeping the 3D model of blocks.
+Items in the hotbar are sprites generated at runtime, improving rendering efficiency while retaining the blocks' 3D models.
 
 You can find the repo [here](https://github.com/ofts-cqm/UnityCraft). 
 :::
 
-::: flip-card title="Minecraft From Scratch" image="../pictures/minecraft-old.png" alt="java rendered Minecraft from scratch" languages="Java"
-A Minecraft built using my own Java 3D CPU Render from scratch. No libraries or engines used, everything built using pure Java's built-in libraries. Supports ~40 blocks. Supports async chunk loading and saving. My understanding of the rendering pipeline, shaders, render, and computer graphics together helped me to build this project. 
+::: flip-card title="Minecraft From Scratch" image="../pictures/minecraft-old.png" alt="Java-rendered Minecraft game" languages="Java"
+A Minecraft-inspired game built from scratch with my own Java 3D CPU renderer. I used only Java's built-in libraries, with no external libraries or game engines. It supports about 40 blocks, asynchronous chunk loading, and saving. My understanding of the rendering pipeline and computer graphics helped me build this project.
 
-This is a very old project, I kinda lost the repo. 
+This is an old project, and I no longer have the repository.
 :::
 ::::
 
 ## AI Integration
 
 ::: accordion title="LEARN Integration" open=false
-I connected LEARN, which is UWaterloo's course platform, to codex. Now codex helps me to manage my calendar. It automatically marks all deadlines, it sends me notifications about important announcements. It manages a knowledge base, and whenever I have questions regarding an assignment's requirement, I can just ask codex directly instead of finding through scattered course webpages. 
+I connected LEARN, the University of Waterloo's course platform, to Codex. Now Codex helps me manage my calendar: it marks deadlines and notifies me about important announcements. It also manages a knowledge base, so I can ask about assignment requirements instead of searching through scattered course pages.
 :::
 
 ::: accordion title="Replay MCP" open=false
-Replay MCP is more than a Minecraft Mod. 
+Replay MCP is more than a Minecraft mod.
 
 Replay MCP connects a Minecraft client, Replay Mod, a local MCP server, and a Codex plugin. It lets an AI assistant work with a real Minecraft client through safe, normal game inputs; record or import performances; edit Replay Mod timelines; render footage; and organize a production project.
 
-The goal is to open a door for AI to create Minecraft Videos. Currently, it is still significantly slower than human editing, but it opens up the possibility for AI Minecraft film making. It also frees YouTubers from frequent video editing and give them more time to focus on planning and script writing while the AI processes all edits in the background.
+The goal is to enable AI to create Minecraft videos. Currently, it is still significantly slower than human editing, but it opens up possibilities for AI-assisted Minecraft filmmaking. It could also give YouTubers more time to focus on planning and scriptwriting while AI handles some editing tasks.
 
 It currently supports:
 
-- AI "playwright" tool to observe and interact with Minecraft
-- Replay Mod recording and timeline edit.
-- Handoff to post-production video editors for caption, music, and clipping, etc.
+- An AI "Playwright" tool to observe and interact with Minecraft
+- Replay Mod recording and timeline editing
+- Handoff to post-production video editors for captions, music, and clipping
 
-With Replay MCP, codex can now film Minecraft videos! I am happy to announce that there is one more thing AI can do. 
+With Replay MCP, Codex can now help film Minecraft videos! I am happy to announce that there is one more thing AI can do.
 
 [Repo Here](https://github.com/ofts-cqm/Replay-MCP)
 
@@ -100,79 +100,79 @@ With Replay MCP, codex can now film Minecraft videos! I am happy to announce tha
 
 ## Video Game Modding
 
-If you go to the MoreAboutMe page, you can find that making mod is actually the core reason I started learning coding. Here is a list of mods I have made. They might seem to be very simple now a days, but remember most mods are made in **2024**, and you can see I actually spent a lot of time trying to learn and make stuff. 
+As I explain on the MoreAboutMe page, making mods is the main reason I started learning to code. Here are some of the mods I have made. They might seem simple now, but I made most of them in **2024**, when I was spending a lot of time learning and experimenting.
 
 ### Stardew Valley Mods:
 
-A lot of these mods are game-design problems occured in the vanilla game. For example, the Agenda, or the Searchable Shop. I made these to improve gameplay experience. 
+Many of these mods address game design problems I encountered in the base game, such as the need for an agenda or a searchable shop. I made them to improve the gameplay experience.
 
-I made most of these mods in 2024. That is the time where I just started using Github, so some of the mods don't have a repo, or a very messy repo. [This is my profile page](https://www.nexusmods.com/profile/OFTSCQM) if you are interested. 
+I made most of these mods in 2024, when I had just started using GitHub, so some have no repository or have a messy one. You can find them on [my Nexus Mods profile](https://www.nexusmods.com/profile/OFTSCQM).
 
 :::: grid columns=3
 
-::: flip-card title="Farming/Fishing Only Challenge" image="../pictures/fish-only-challenge.png" alt="Video Game Modding" languages="C Sharp" 
-My friend asked me to make these two mods. She is a YouTuber and wants some *Unique* challenges, so I made this. All quests are replaced with farming/fishing related activities, and everything else than farming/fishing is disabled. Hopefully these two mods gave her more subscribers. 
+::: flip-card title="Farming/Fishing Only Challenge" image="../pictures/fish-only-challenge.png" alt="Farming and fishing challenge mod" languages="C#"
+My friend, a YouTuber, asked me to make these two mods for some *unique* challenges. They replace all quests with farming- or fishing-related activities and disable activities outside those challenges. I hope the mods helped her channel grow.
 :::
 
-::: flip-card title="Joja Express" image="../pictures/joja-express.png" alt="Video Game Modding" languages="C Sharp" 
-This is an "Amazon" mod I made. I noticed that the game lacks online shopping, causing a lot of inconveniency. Therefore, I made this. Now the user can simply order stuff online and get them delivered. Many people say this is a great experience (but other people say this is cheating)
+::: flip-card title="Joja Express" image="../pictures/joja-express.png" alt="Joja Express shop mod" languages="C#"
+This is an "Amazon" mod I made. I noticed that the game lacked online shopping, which could be inconvenient, so I added it. Now players can order items and have them delivered. Many people say this improves the experience, though others call it cheating.
 :::
 
-::: flip-card title="Agenda" image="../pictures/agenda.png" alt="Video Game Modding" languages="C Sharp" 
+::: flip-card title="Agenda" image="../pictures/agenda.png" alt="Stardew Valley agenda mod" languages="C#"
 
 This one is definitely not cheating. This is a real game design problem. 
 
-You see, Stardew Valley is infamous for its time constrints. You see, the game constantly requires the player to do specific things in specific time, which requires a lot of planning. For example, some crops only grow in specific season, and some shops only open on specific day of week. 
+Stardew Valley is known for its time constraints. The game often requires players to do specific things at specific times, which takes a lot of planning. For example, some crops grow only in certain seasons, and some shops open only on certain days of the week.
 
-In other games if you missed a task you can simply "do it tomorrow," but this is not true for Stardew Valley. If you missed a task, you may need to wait for another week, or even another year! *AND THE GAME DOESN'T HAVE A CALENDAR!!!!* 
+In other games, if you miss a task, you can simply "do it tomorrow." In Stardew Valley, you might need to wait another week or even another year! *AND THE GAME DOESN'T HAVE AN EDITABLE CALENDAR!*
 
-Technically the game does have a calendar but it is readonly and only display fixed stuff. This is very frastrating since we cannot record our own tasks. 
+Technically, the game has a calendar, but it is read-only and displays only preset events. This is frustrating because we cannot record our own tasks.
 
-Therefore I made this agenda mod, which allows user to mark specific events on Calendar, and there will be an obvious reminder when the time approach. No one should ever miss a single task. 
+So I made an agenda mod that lets players add events to the calendar and shows a clear reminder as an event approaches. It helps players keep track of their tasks.
 :::
 
-::: flip-card title="Searchable Shop" image="../pictures/searchable-shop.png" alt="Video Game Modding" languages="C Sharp" 
-This is a derived shop from Joja Express. Because Joja Express is a big shop, sometimes the player is hard to find the item needed; therefore I added this search button. However, some player commented that they want this search button to be a stand-alone mod, so I made it!
+::: flip-card title="Searchable Shop" image="../pictures/searchable-shop.png" alt="Searchable shop mod" languages="C#"
+This search feature started in Joja Express. Because Joja Express is a large shop, players sometimes struggled to find the items they needed. When some players asked for the search feature as a standalone mod, I made one!
 :::
 
-::: flip-card title="Tool Assembly" image="../pictures/tool-assembly.png" alt="Video Game Modding" languages="C Sharp" 
-Stardew Valley has a problem: it has a lot of tools, with a very tight inventory space. Sometimes my inventory get filled with a lot of tools. Therefore, I made this mod. It adds a omnicient tool that can transform to all tools, and the player can simply switch which tool they want, saving a lot of inventory space. 
+::: flip-card title="Tool Assembly" image="../pictures/tool-assembly.png" alt="All-in-one tool mod" languages="C#"
+Stardew Valley has many tools but limited inventory space. My inventory sometimes filled up with tools, so I made this mod. It adds an all-in-one tool that can transform into the tool a player needs, saving inventory space.
 :::
 
-::: flip-card title="Translation Replacer" image="../pictures/translation-replacer.png" alt="Video Game Modding" languages="C Sharp" 
-This was a game bug around version 1.6. In this version a lot of Simplified Chinese translations are incorrect. Therefore I made this mod to replace translations. Now the bug is fixed but this mod remains for those who wants to change translations. 
+::: flip-card title="Translation Replacer" image="../pictures/translation-replacer.png" alt="Translation replacer mod" languages="C#"
+Around version 1.6, many Simplified Chinese translations were incorrect. I made this mod to replace them. The bug has since been fixed, but the mod remains available for players who want to change translations.
 :::
 
 ::::
 
 ### Minecraft Mods:
 
-I also made a few Minecraft mods for my personal use. Minecraft is famous for its mod community, so whenever I have an Idea there is always a mod already existed, which is kinda frastrating. Therefore, most minecraft mods focus on my own unique needs. 
+I also made a few Minecraft mods for personal use. Minecraft has a large modding community, so when I have an idea, a similar mod often already exists. Most of my Minecraft mods therefore focus on my own needs.
 
 ::: accordion title="Artist"
-I love to make pixel map arts in Minecraft. A map art is basically you fill a whole area with specific pixels, so it looks like a painting when you open the map. 
+I love making pixel art on Minecraft maps. To create map art, you arrange blocks across an area so they form an image when viewed on a map.
 
-However, I often don't have enough time for that. This is a "bot" that automatically build a given painting. It can build a standard 128x128 map in 30 minutes. 
+However, I often do not have enough time for that. This bot automatically builds a given image. It can build a standard 128 × 128 map in 30 minutes.
 
-This is a little bit slower than human building (usually 20 minutes) but this is fully automated! It means I can study, coding, cooking, or doing other stuff while I have this bot automatically build stuff for me while I am AFK. 
+That is a little slower than building by hand (usually 20 minutes), but it is fully automated! I can study, code, cook, or do other things while the bot builds for me.
 
 [Repo Here](https://github.com/ofts-cqm/Artist)
 :::
 
 ::: accordion title="Hohxil Auto Login"
-A "playwright" tool I made for a SMP server I play, the ckocc server, or "HohXil". It contains fully automated login, world selection in hub, daily checkin, and reward claiming.
+A "Playwright" tool I made for an SMP server I play on, CKOCC, also called "HohXil." It automates login, world selection in the hub, daily check-in, and reward claiming.
 
-Of course it also contains other stuff like an automated advertisement of my shop when new players join...
+It also advertises my shop when new players join...
 
 [Repo Here](https://github.com/ofts-cqm/Hohxil-Auto-Login)
 :::
 
 ::: accordion title="Replay MCP"
-This one is technically more than a "Mod". Replay is a minecraft mod that can conveniently record and edit Minecraft video. It is commonly used by many YouTubers or servers to make Minecraft related films. However, I noticed that it currently lacks an AI connection... Which is exactly what I am building! This is a MCP server that connects Replay to Codex, so codex can conduct the player to perform various tasks and make Minecraft videos, while the user is just AFK! 
+This one is more than a mod. Replay Mod is a Minecraft mod for recording and editing Minecraft videos. Many YouTubers and servers use it to make Minecraft films. I noticed it lacked an AI connection, so I built an MCP server that connects Replay Mod to Codex. Codex can direct a player through various tasks and help make Minecraft videos while the user is AFK!
 
 [Repo Here](https://github.com/ofts-cqm/Replay-MCP)
 :::
 
 ## This Website
 
-BTW This website uses Vue if you are interested. You can find the source code [Here](https://github.com/ofts-cqm/home).
+By the way, this website uses Vue. You can find the source code [here](https://github.com/ofts-cqm/home).
