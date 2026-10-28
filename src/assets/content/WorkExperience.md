@@ -25,7 +25,7 @@ AI can produce a working first version of software, but making it maintainable a
 
 At Ascendance Foundry, I worked with a private equity firm to automate its accounting processes. By connecting platforms in its Microsoft stack, I automated **payroll processing**, **expense recharging**, **financial statement generation**, and **deal transaction management**.
 
-With the help of AI and knowledge gained at university and through personal projects, I reduced processes that used to take a few days to a single click while significantly reducing bookkeeping errors. Manual errors can accumulate: assuming each journal entry has an independent 95% chance of being correct, the chance that all 29 entries in a month's deal are correct is about 0.95^29 = 22.6%. In the automated workflow, data are computed from configured tables and validated against a set of rules.
+With the help of AI and knowledge gained at university and through personal projects, I reduced processes that used to take a few days to a single click while significantly reducing bookkeeping errors. Manual errors can accumulate: even if you do a journal 95% of the time correct, well, the chance that all 29 entries in a month's deal are correct is about 0.95^29 = 22.6%. In the automated workflow, data are computed deterministically from configured tables and validated against a set of rules, which largely eliminates the inconsistency and risks created by manual calculation.
 
 ## What did I design or implement? Which systems did I connect?
 
